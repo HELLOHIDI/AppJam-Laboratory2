@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class LoginViewController: BaseViewController {
-
+    
     //MARK: - Properties
     
     private lazy var loginView = LoginView()
@@ -18,10 +18,21 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginView.loginButton.addTarget(self, action: #selector(gotoWelcomeView), for: .touchUpInside)
     }
     
     override func loadView() {
         self.view = loginView
     }
     
+    func presentToWelcomeView() {
+        let welcomeViewController = WelcomeViewController()
+        welcomeViewController.modalPresentationStyle = .formSheet
+        self.present(welcomeViewController, animated: true)
+    }
+    
+    @objc
+    private func gotoWelcomeView() {
+        presentToWelcomeView()
+    }
 }
