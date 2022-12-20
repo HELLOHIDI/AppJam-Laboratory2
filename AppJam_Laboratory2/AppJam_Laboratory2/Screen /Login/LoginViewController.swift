@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController: BaseViewController {
+final class LoginViewController: BaseViewController {
     
     //MARK: - Properties
     
@@ -26,13 +26,13 @@ class LoginViewController: BaseViewController {
         self.view = loginView
     }
     
-    func presentToWelcomeView() {
+    private func presentToWelcomeView() {
         let welcomeViewController = WelcomeViewController()
         welcomeViewController.modalPresentationStyle = .formSheet
         self.present(welcomeViewController, animated: true)
     }
     
-    func pushToSignUpView() {
+    private func pushToSignUpView() {
         let signUpViewController = SignUpViewController()
         self.navigationController?.pushViewController(signUpViewController, animated: true)
     }
