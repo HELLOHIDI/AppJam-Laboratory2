@@ -43,7 +43,10 @@ final class SignUpView: BaseView {
         $0.textColor = 0xA09FA0.color
         $0.textAlignment = .center
         $0.borderStyle = .none
-        $0.placeholder = "비밀번호"
+        $0.attributedPlaceholder = NSAttributedString(
+            string: "비밀번호",
+            attributes: [NSAttributedString.Key.foregroundColor : 0xA09FA0.color]
+        )
     }
     
     private var passWordUnderLineView = UIView().then {
@@ -55,19 +58,93 @@ final class SignUpView: BaseView {
         $0.textColor = 0xA09FA0.color
         $0.textAlignment = .center
         $0.borderStyle = .none
-        $0.placeholder = "비밀번호 확인"
+        $0.attributedPlaceholder = NSAttributedString(
+            string: "비밀번호 확인",
+            attributes: [NSAttributedString.Key.foregroundColor : 0xA09FA0.color]
+        )
     }
     
     private var checkPassWordUnderLineView = UIView().then {
         $0.backgroundColor = 0xA09FA0.color
     }
     
-    private var SignUpButton = UIButton().then {
+    private var signUpButton = UIButton().then {
         $0.backgroundColor = 0xF6F6F6.color
         $0.setTitle("새로운 카카오계정 만들기", for: .normal)
         $0.setTitleColor(0x000000.color, for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15)
         $0.titleLabel?.textAlignment = .center
+    }
+    
+    //MARK: - Custom Method
+    
+    override func setupView() {
+        
+        [titleLabel, emailTextField, emailUnderLineView, passwordTextField, passWordUnderLineView,
+         checkPassWordTextField, checkPassWordUnderLineView, signUpButton].forEach{
+            addSubview($0)
+        }
+    }
+    
+    override func setupConstraints() {
+        
+        titleLabel.snp.makeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(40)
+            $0.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(89)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-89)
+            $0.width.equalTo(197)
+            $0.height.equalTo(25)
+        }
+        
+        emailTextField.snp.makeConstraints {
+            $0.top.equalTo(self.titleLabel.snp.bottom).offset(129)
+            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(21)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-212)
+        }
+        
+        emailUnderLineView.snp.makeConstraints {
+            $0.top.equalTo(self.emailTextField.snp.bottom).offset(13)
+            $0.leading.equalTo(self.emailTextField)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-4)
+            $0.width.equalTo(350)
+            $0.height.equalTo(1)
+        }
+        
+        passwordTextField.snp.makeConstraints {
+            $0.top.equalTo(self.emailUnderLineView.snp.bottom).offset(23)
+            $0.leading.equalTo(self.emailTextField)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-295)
+        }
+        
+        passWordUnderLineView.snp.makeConstraints {
+            $0.top.equalTo(self.passwordTextField.snp.bottom).offset(13)
+            $0.leading.equalTo(self.emailTextField)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-4)
+            $0.width.equalTo(350)
+            $0.height.equalTo(1)
+        }
+        
+        checkPassWordTextField.snp.makeConstraints {
+            $0.top.equalTo(self.passWordUnderLineView.snp.bottom).offset(23)
+            $0.leading.equalTo(self.emailTextField)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-261)
+        }
+        
+        checkPassWordUnderLineView.snp.makeConstraints {
+            $0.top.equalTo(self.checkPassWordTextField.snp.bottom).offset(13)
+            $0.leading.equalTo(self.emailTextField)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-4)
+            $0.width.equalTo(350)
+            $0.height.equalTo(1)
+        }
+        
+        signUpButton.snp.makeConstraints {
+            $0.top.equalTo(self.checkPassWordUnderLineView.snp.bottom).offset(26)
+            $0.leading.equalTo(self.emailTextField)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-21)
+            $0.width.equalTo(333)
+            $0.height.equalTo(44)
+        }
     }
 }
 
