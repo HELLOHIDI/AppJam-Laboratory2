@@ -19,6 +19,7 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.loginButton.addTarget(self, action: #selector(gotoWelcomeView), for: .touchUpInside)
+        loginView.signUpButton.addTarget(self, action: #selector(gotoSignUpView), for: .touchUpInside)
     }
     
     override func loadView() {
@@ -31,8 +32,18 @@ class LoginViewController: BaseViewController {
         self.present(welcomeViewController, animated: true)
     }
     
+    func pushToSignUpView() {
+        let signUpViewController = SignUpViewController()
+        self.navigationController?.pushViewController(signUpViewController, animated: true)
+    }
+    
     @objc
     private func gotoWelcomeView() {
         presentToWelcomeView()
+    }
+    
+    @objc
+    private func gotoSignUpView() {
+        pushToSignUpView()
     }
 }
