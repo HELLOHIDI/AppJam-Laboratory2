@@ -53,7 +53,6 @@ final class LoginView: BaseView {
         $0.textAlignment = .center
         $0.borderStyle = .none
         $0.placeholder = "비밀번호"
-        
     }
     
     private var passWordUnderLineView = UIView().then {
