@@ -23,6 +23,8 @@
 		D2B24BE2295165BB005B0518 /* SwiftyColor in Frameworks */ = {isa = PBXBuildFile; productRef = D2B24BE1295165BB005B0518 /* SwiftyColor */; };
 		D2B24BE829517592005B0518 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BE729517592005B0518 /* LoginView.swift */; };
 		D2B24BEA2951759C005B0518 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BE92951759C005B0518 /* LoginViewController.swift */; };
+		D2B24BED29518AB6005B0518 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BEC29518AB6005B0518 /* BaseView.swift */; };
+		D2B24BEF29518B0A005B0518 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BEE29518B0A005B0518 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		D2B24BC329515E68005B0518 /* AppJam_Laboratory2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppJam_Laboratory2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D2B24BE729517592005B0518 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D2B24BE92951759C005B0518 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D2B24BEC29518AB6005B0518 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D2B24BEE29518B0A005B0518 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 		D2B24BD329515F68005B0518 /* Screen  */ = {
 			isa = PBXGroup;
 			children = (
+				D2B24BEB29518AA8005B0518 /* Common */,
 				D2B24BE62951756A005B0518 /* Login */,
 			);
 			path = "Screen ";
@@ -189,6 +194,15 @@
 				D2B24BE92951759C005B0518 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		D2B24BEB29518AA8005B0518 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D2B24BEC29518AB6005B0518 /* BaseView.swift */,
+				D2B24BEE29518B0A005B0518 /* BaseViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,7 +353,9 @@
 				D2B24BA529515E66005B0518 /* ViewController.swift in Sources */,
 				D2B24BA129515E66005B0518 /* AppDelegate.swift in Sources */,
 				D2B24BE829517592005B0518 /* LoginView.swift in Sources */,
+				D2B24BED29518AB6005B0518 /* BaseView.swift in Sources */,
 				D2B24BEA2951759C005B0518 /* LoginViewController.swift in Sources */,
+				D2B24BEF29518B0A005B0518 /* BaseViewController.swift in Sources */,
 				D2B24BA329515E66005B0518 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

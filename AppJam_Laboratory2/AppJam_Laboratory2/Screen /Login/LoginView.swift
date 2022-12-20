@@ -12,11 +12,7 @@ import SnapKit
 import SwiftyColor
 import Then
 
-final class LoginView: UIView {
-    
-    private var loginView = UIView().then {
-        $0.backgroundColor = .white
-    }
+final class LoginView: BaseView {
     
     private var titleLabel = UILabel().then {
         $0.text = "카카오톡을 시작합니다"
@@ -79,14 +75,14 @@ final class LoginView: UIView {
         $0.titleLabel?.textAlignment = .center
     }
     
-    private func setupView() {
+    override func setupView() {
         [titleLabel, descriptionLabel, emailTextField, emailUnderLineView,
          passwordTextField, passWordUnderLineView, loginButton, signUpButton,findEmailorPasswordButton].forEach{
-            $0.addSubview(loginView)
+            addSubview($0)
         }
     }
     
-    private func setupConstraints() {
+    override func setupConstraints() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide).offset(40)
             $0.leading.equalTo(self.safeAreaLayoutGuide).offset(89)
