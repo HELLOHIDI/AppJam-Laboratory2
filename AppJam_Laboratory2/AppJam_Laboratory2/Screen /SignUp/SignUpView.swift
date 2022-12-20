@@ -90,8 +90,7 @@ final class SignUpView: BaseView {
         
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(40)
-            $0.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(89)
-            $0.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-89)
+            $0.leading.trailing.equalTo(self.safeAreaLayoutGuide.snp.leading).inset(89)
             $0.width.equalTo(197)
             $0.height.equalTo(25)
         }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D2744C42295217C40068C0B2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C41295217C40068C0B2 /* SignUpView.swift */; };
 		D2744C44295217D10068C0B2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C43295217D10068C0B2 /* SignUpViewController.swift */; };
+		D2744C47295228A30068C0B2 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C46295228A30068C0B2 /* WelcomeView.swift */; };
+		D2744C49295228B20068C0B2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C48295228B20068C0B2 /* WelcomeViewController.swift */; };
 		D2B24BA129515E66005B0518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA029515E66005B0518 /* AppDelegate.swift */; };
 		D2B24BA329515E66005B0518 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA229515E66005B0518 /* SceneDelegate.swift */; };
 		D2B24BA529515E66005B0518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA429515E66005B0518 /* ViewController.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		D2744C41295217C40068C0B2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		D2744C43295217D10068C0B2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D2744C46295228A30068C0B2 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		D2744C48295228B20068C0B2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D2B24B9D29515E66005B0518 /* AppJam_Laboratory2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppJam_Laboratory2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B24BA029515E66005B0518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B24BA229515E66005B0518 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 				D2744C43295217D10068C0B2 /* SignUpViewController.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		D2744C45295228920068C0B2 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				D2744C46295228A30068C0B2 /* WelcomeView.swift */,
+				D2744C48295228B20068C0B2 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		D2B24B9429515E66005B0518 = {
@@ -188,6 +201,7 @@
 		D2B24BD329515F68005B0518 /* Screen  */ = {
 			isa = PBXGroup;
 			children = (
+				D2744C45295228920068C0B2 /* Welcome */,
 				D2744C40295217A80068C0B2 /* SignUp */,
 				D2B24BEB29518AA8005B0518 /* Common */,
 				D2B24BE62951756A005B0518 /* Login */,
@@ -374,9 +388,11 @@
 			files = (
 				D2B24BA529515E66005B0518 /* ViewController.swift in Sources */,
 				D2B24BA129515E66005B0518 /* AppDelegate.swift in Sources */,
+				D2744C49295228B20068C0B2 /* WelcomeViewController.swift in Sources */,
 				D2B24BE829517592005B0518 /* LoginView.swift in Sources */,
 				D2B24BED29518AB6005B0518 /* BaseView.swift in Sources */,
 				D2744C42295217C40068C0B2 /* SignUpView.swift in Sources */,
+				D2744C47295228A30068C0B2 /* WelcomeView.swift in Sources */,
 				D2B24BEA2951759C005B0518 /* LoginViewController.swift in Sources */,
 				D2744C44295217D10068C0B2 /* SignUpViewController.swift in Sources */,
 				D2B24BEF29518B0A005B0518 /* BaseViewController.swift in Sources */,
