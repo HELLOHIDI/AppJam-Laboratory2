@@ -18,9 +18,21 @@ class SignUpViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        signUpView.signUpButton.addTarget(self, action: #selector(gotoWelcomeView), for: .touchUpInside)
     }
     
     override func loadView() {
         self.view = signUpView
+    }
+    
+    private func presentToWelcomeView() {
+        let welcomeViewController = WelcomeViewController()
+        welcomeViewController.modalPresentationStyle = .formSheet
+        self.present(welcomeViewController, animated: true)
+    }
+    
+    @objc
+    private func gotoWelcomeView() {
+        presentToWelcomeView()
     }
 }

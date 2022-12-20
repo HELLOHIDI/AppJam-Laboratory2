@@ -68,7 +68,7 @@ final class SignUpView: BaseView {
         $0.backgroundColor = 0xA09FA0.color
     }
     
-    private var signUpButton = UIButton().then {
+    public var signUpButton = UIButton().then {
         $0.backgroundColor = 0xF6F6F6.color
         $0.setTitle("새로운 카카오계정 만들기", for: .normal)
         $0.setTitleColor(0x000000.color, for: .normal)
