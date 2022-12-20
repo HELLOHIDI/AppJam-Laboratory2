@@ -89,8 +89,8 @@ final class SignUpView: BaseView {
     override func setupConstraints() {
         
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(40)
-            $0.leading.trailing.equalTo(self.safeAreaLayoutGuide.snp.leading).inset(89)
+            $0.top.equalTo(self.safeAreaLayoutGuide).offset(40)
+            $0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(89)
             $0.width.equalTo(197)
             $0.height.equalTo(25)
         }

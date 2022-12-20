@@ -22,6 +22,12 @@ class WelcomeViewController: BaseViewController {
     
     override func loadView() {
         self.view = welcomeView
+        welcomeView.welcomeButton.addTarget(self, action: #selector(dismissWelcomeView), for: .touchUpInside)
+    }
+    
+    @objc
+    private func dismissWelcomeView() {
+        self.dismiss(animated: true)
     }
 }
 

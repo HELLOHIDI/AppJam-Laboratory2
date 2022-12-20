@@ -24,7 +24,7 @@ final class WelcomeView: BaseView {
         $0.numberOfLines = 2
     }
     
-    private var welcomeButton = UIButton().then {
+    public var welcomeButton = UIButton().then {
         $0.backgroundColor = 0xFBE54C.color
         $0.setTitle("확인", for: .normal)
         $0.setTitleColor(0x000000.color, for: .normal)
