@@ -20,6 +20,8 @@ class BaseView: UIView {
         super.init(coder: coder)
     }
     
+    //MARK: - Custom Method
+    
     func setupView() {}
     func setupConstraints() {}
 }

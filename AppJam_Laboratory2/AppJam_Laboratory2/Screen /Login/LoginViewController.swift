@@ -10,8 +10,11 @@ import UIKit
 
 class LoginViewController: BaseViewController {
 
+    //MARK: - Properties
+    
     private lazy var loginView = LoginView()
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }

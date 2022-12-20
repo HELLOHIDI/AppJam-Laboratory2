@@ -15,6 +15,8 @@ import Then
 
 final class LoginView: BaseView {
     
+    //MARK: - UI Components
+    
     private var titleLabel = UILabel().then {
         $0.text = "카카오톡을 시작합니다"
         $0.textColor = UIColor.black
@@ -35,7 +37,10 @@ final class LoginView: BaseView {
         $0.textColor = 0x000000.color
         $0.textAlignment = .center
         $0.borderStyle = .none
-        $0.attributedPlaceholder = NSAttributedString(string: "이메일 또는 전화번호", attributes: [NSAttributedString.Key.foregroundColor : 0xA09FA0.color])
+        $0.attributedPlaceholder = NSAttributedString(
+            string: "이메일 또는 전화번호",
+            attributes: [NSAttributedString.Key.foregroundColor : 0xA09FA0.color]
+        )
     }
     
     private var emailUnderLineView = UIView().then {
@@ -79,9 +84,12 @@ final class LoginView: BaseView {
         $0.titleLabel?.textAlignment = .center
     }
     
+    //MARK: - Custom Method
+    
     override func setupView() {
         [titleLabel, descriptionLabel, emailTextField, emailUnderLineView,
-         passwordTextField, passWordUnderLineView, loginButton, signUpButton,findEmailorPasswordButton].forEach{
+         passwordTextField, passWordUnderLineView, loginButton,
+         signUpButton, findEmailorPasswordButton].forEach{
             addSubview($0)
         }
     }
@@ -151,7 +159,7 @@ final class LoginView: BaseView {
         
         findEmailorPasswordButton.snp.makeConstraints {
             $0.top.equalTo(self.signUpButton.snp.bottom).offset(19)
-            // 같이 쓸 수 있는지 확인
+            /// 같이 쓸 수 있는지 확인
             $0.leading.equalTo(self.safeAreaLayoutGuide).offset(112)
             $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-112)
             $0.width.equalTo(151)
