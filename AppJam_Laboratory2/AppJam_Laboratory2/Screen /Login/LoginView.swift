@@ -14,6 +14,10 @@ import Then
 
 final class LoginView: UIView {
     
+    private var loginView = UIView().then {
+        $0.backgroundColor = .white
+    }
+    
     private var titleLabel = UILabel().then {
         $0.text = "카카오톡을 시작합니다"
         $0.textColor = UIColor.black
@@ -24,6 +28,7 @@ final class LoginView: UIView {
         $0.text = "사용하던 카카오계정이 있다면 \n 이메일 또는 전화번호로 로그인해 주세요."
         $0.textColor = 0x7D7E7D.color
         $0.font = UIFont.systemFont(ofSize: 15)
+        $0.numberOfLines = 2
     }
     
     private var emailTextField = UITextField().then {
@@ -67,20 +72,96 @@ final class LoginView: UIView {
     }
     
     private var findEmailorPasswordButton = UIButton().then {
-        $0.backgroundColor = 0xF6F6F6.color
+        $0.backgroundColor = 0xffffff.color
         $0.setTitle("카카오계정 또는 비밀번호 찾기", for: .normal)
         $0.setTitleColor(0x313030.color, for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         $0.titleLabel?.textAlignment = .center
     }
+    
+    private func setupView() {
+        [titleLabel, descriptionLabel, emailTextField, emailUnderLineView,
+         passwordTextField, passWordUnderLineView, loginButton, signUpButton,findEmailorPasswordButton].forEach{
+            $0.addSubview(loginView)
+        }
+    }
+    
+    private func setupConstraints() {
+        titleLabel.snp.makeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide).offset(40)
+            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(89)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-89)
+            $0.width.equalTo(197)
+            $0.height.equalTo(25)
+        }
+        
+        descriptionLabel.snp.makeConstraints {
+            $0.top.equalTo(self.titleLabel.snp.bottom).offset(20)
+            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(67)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-68)
+            $0.width.equalTo(240)
+            $0.height.equalTo(32)
+        }
+        
+        emailTextField.snp.makeConstraints {
+            $0.top.equalTo(self.descriptionLabel.snp.bottom).offset(73)
+            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(21)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-212)
+            $0.width.equalTo(142)
+            $0.height.equalTo(23)
+        }
+        
+        emailUnderLineView.snp.makeConstraints {
+            $0.top.equalTo(self.emailTextField.snp.bottom).offset(13)
+            $0.leading.equalTo(self.emailTextField)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-4)
+            $0.width.equalTo(350)
+            $0.height.equalTo(1)
+        }
+        
+        passwordTextField.snp.makeConstraints {
+            $0.top.equalTo(self.emailUnderLineView.snp.bottom).offset(23)
+            $0.leading.equalTo(self.emailTextField)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-295)
+            $0.width.equalTo(59)
+            $0.height.equalTo(23)
+        }
+        
+        passWordUnderLineView.snp.makeConstraints {
+            $0.top.equalTo(self.passwordTextField.snp.bottom).offset(13)
+            $0.leading.equalTo(self.emailTextField)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-4)
+            $0.width.equalTo(350)
+            $0.height.equalTo(1)
+        }
+        
+        loginButton.snp.makeConstraints {
+            $0.top.equalTo(self.passWordUnderLineView.snp.bottom).offset(35)
+            $0.leading.equalTo(self.emailTextField)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-21)
+            $0.width.equalTo(333)
+            $0.height.equalTo(44)
+        }
+        
+        signUpButton.snp.makeConstraints {
+            $0.top.equalTo(self.loginButton.snp.bottom).offset(10)
+            $0.leading.equalTo(self.emailTextField)
+            $0.trailing.equalTo(self.loginButton)
+            $0.width.equalTo(333)
+            $0.height.equalTo(44)
+        }
+        
+        findEmailorPasswordButton.snp.makeConstraints {
+            $0.top.equalTo(self.signUpButton.snp.bottom).offset(19)
+            // 같이 쓸 수 있는지 확인
+            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(112)
+            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-112)
+            $0.width.equalTo(333)
+            $0.height.equalTo(44)
+        }
+    }
+    
 }
 
-private func setupView() {
-   
-}
-
-private func setupConstraints() {
-
-}
 
 
