@@ -6,3 +6,18 @@
 //
 
 import Foundation
+import UIKit
+
+class LoginViewController: BaseViewController {
+
+    private lazy var loginView = LoginView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func loadView() {
+        self.view = loginView
+    }
+    
+}

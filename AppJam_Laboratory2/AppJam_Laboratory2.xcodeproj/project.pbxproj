@@ -154,6 +154,7 @@
 		D2B24BD129515F53005B0518 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D2B24BF029518EB1005B0518 /* Font */,
 				D2B24BA629515E66005B0518 /* Main.storyboard */,
 				D2B24BAB29515E67005B0518 /* LaunchScreen.storyboard */,
 				D2B24BA229515E66005B0518 /* SceneDelegate.swift */,
@@ -203,6 +204,13 @@
 				D2B24BEE29518B0A005B0518 /* BaseViewController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		D2B24BF029518EB1005B0518 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
