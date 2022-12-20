@@ -44,8 +44,7 @@ final class WelcomeView: BaseView {
         
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide).offset(197)
-            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(144)
-            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-144)
+            $0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(144)
         }
         
         welcomeButton.snp.makeConstraints {

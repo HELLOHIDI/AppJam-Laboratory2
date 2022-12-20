@@ -96,8 +96,7 @@ final class LoginView: BaseView {
     override func setupConstraints() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide).offset(40)
-            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(89)
-            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-89)
+            $0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(89)
             $0.width.equalTo(197)
             $0.height.equalTo(25)
         }
@@ -142,25 +141,21 @@ final class LoginView: BaseView {
         
         loginButton.snp.makeConstraints {
             $0.top.equalTo(self.passWordUnderLineView.snp.bottom).offset(35)
-            $0.leading.equalTo(self.emailTextField)
-            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-21)
+            $0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(21)
             $0.width.equalTo(333)
             $0.height.equalTo(44)
         }
         
         signUpButton.snp.makeConstraints {
             $0.top.equalTo(self.loginButton.snp.bottom).offset(10)
-            $0.leading.equalTo(self.emailTextField)
-            $0.trailing.equalTo(self.loginButton)
+            $0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(21)
             $0.width.equalTo(333)
             $0.height.equalTo(44)
         }
         
         findEmailorPasswordButton.snp.makeConstraints {
             $0.top.equalTo(self.signUpButton.snp.bottom).offset(19)
-            /// 같이 쓸 수 있는지 확인
-            $0.leading.equalTo(self.safeAreaLayoutGuide).offset(112)
-            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-112)
+            $0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(112)
             $0.width.equalTo(151)
             $0.height.equalTo(20)
         }
