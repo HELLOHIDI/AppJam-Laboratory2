@@ -23,7 +23,9 @@ final class FriendTopView: BaseView {
         $0.textColor = 0x000000.color
     }
     
-    private var settingIcon = UIImageView()
+    private var settingIcon = UIImageView().then {
+        $0.image = UIImage(named: "ic_setting")
+    }
     
     //MARK: - Custom Method
     
