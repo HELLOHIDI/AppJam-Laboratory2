@@ -29,6 +29,8 @@ final class LoginViewController: BaseViewController {
     private func presentToWelcomeView() {
         let welcomeViewController = WelcomeViewController()
         welcomeViewController.modalPresentationStyle = .formSheet
+        guard let email = loginView.emailTextField.text else { return }
+        welcomeViewController.dataSend(email: email)
         self.present(welcomeViewController, animated: true)
     }
     
