@@ -11,7 +11,6 @@ import UIKit
 class SignUpViewController: BaseViewController {
     
     //MARK: - Properties
-    
     private lazy var signUpView = SignUpView()
     
     //MARK: - Life Cycle
@@ -28,6 +27,10 @@ class SignUpViewController: BaseViewController {
     private func presentToWelcomeView() {
         let welcomeViewController = WelcomeViewController()
         welcomeViewController.modalPresentationStyle = .formSheet
+        
+        guard let email = signUpView.emailTextField.text else { return }
+        welcomeViewController.dataSend(email: email)
+        
         self.present(welcomeViewController, animated: true)
     }
     

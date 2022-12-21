@@ -23,7 +23,7 @@ final class SignUpView: BaseView {
         $0.textAlignment = .center
     }
     
-    private var emailTextField = UITextField().then {
+    public var emailTextField = UITextField().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 17)
         $0.textColor = 0x000000.color
         $0.textAlignment = .center

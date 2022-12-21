@@ -16,7 +16,7 @@ final class WelcomeView: BaseView {
     
     //MARK: - UI Components
     
-    private var titleLabel = UILabel().then {
+    public var titleLabel = UILabel().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 20)
         $0.text = "000님 \n 환영합니다"
         $0.textColor = UIColor.black
