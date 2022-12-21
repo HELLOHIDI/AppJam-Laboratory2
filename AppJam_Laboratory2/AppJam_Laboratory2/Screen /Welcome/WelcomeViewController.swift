@@ -25,9 +25,13 @@ class WelcomeViewController: BaseViewController {
         welcomeView.welcomeButton.addTarget(self, action: #selector(dismissWelcomeView), for: .touchUpInside)
     }
     
+    //MARK: - Custom Method
+    
     func dataSend(email: String) {
         welcomeView.titleLabel.text = "\(email)님 \n 환영합니다"
     }
+    
+    //MARK: - Action Method
     
     @objc
     private func dismissWelcomeView() {

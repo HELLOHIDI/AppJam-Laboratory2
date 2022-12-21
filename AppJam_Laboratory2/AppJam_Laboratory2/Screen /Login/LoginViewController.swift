@@ -26,6 +26,8 @@ final class LoginViewController: BaseViewController {
         self.view = loginView
     }
     
+    //MARK: - Custom Method
+    
     private func presentToWelcomeView() {
         let welcomeViewController = WelcomeViewController()
         welcomeViewController.modalPresentationStyle = .formSheet
@@ -38,6 +40,8 @@ final class LoginViewController: BaseViewController {
         let signUpViewController = SignUpViewController()
         self.navigationController?.pushViewController(signUpViewController, animated: true)
     }
+    
+    //MARK: - Action Method
     
     @objc
     private func gotoWelcomeView() {

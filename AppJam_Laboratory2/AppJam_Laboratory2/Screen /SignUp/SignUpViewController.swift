@@ -11,6 +11,7 @@ import UIKit
 class SignUpViewController: BaseViewController {
     
     //MARK: - Properties
+    
     private lazy var signUpView = SignUpView()
     
     //MARK: - Life Cycle
@@ -24,6 +25,8 @@ class SignUpViewController: BaseViewController {
         self.view = signUpView
     }
     
+    //MARK: - Custom Method
+    
     private func presentToWelcomeView() {
         let welcomeViewController = WelcomeViewController()
         welcomeViewController.modalPresentationStyle = .formSheet
@@ -33,6 +36,8 @@ class SignUpViewController: BaseViewController {
         
         self.present(welcomeViewController, animated: true)
     }
+    
+    //MARK: - Action Method
     
     @objc
     private func gotoWelcomeView() {
