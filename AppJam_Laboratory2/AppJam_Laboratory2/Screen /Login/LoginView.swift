@@ -48,9 +48,12 @@ final class LoginView: BaseView {
     
     private var passwordTextField = UITextField().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 17)
-        $0.textColor = 0xA09FA0.color
+        $0.textColor = 0x000000.color
         $0.borderStyle = .none
-        $0.placeholder = "비밀번호"
+        $0.attributedPlaceholder = NSAttributedString(
+            string: "비밀번호",
+            attributes: [NSAttributedString.Key.foregroundColor : 0xA09FA0.color]
+        )
     }
     
     private var passWordUnderLineView = UIView().then {
