@@ -23,10 +23,9 @@ final class SignUpView: BaseView {
         $0.textAlignment = .center
     }
     
-    private var emailTextField = UITextField().then {
+    public var emailTextField = UITextField().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 17)
         $0.textColor = 0x000000.color
-        $0.textAlignment = .center
         $0.borderStyle = .none
         $0.attributedPlaceholder = NSAttributedString(
             string: "이메일 또는 전화번호",
@@ -40,8 +39,7 @@ final class SignUpView: BaseView {
     
     private var passwordTextField = UITextField().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 17)
-        $0.textColor = 0xA09FA0.color
-        $0.textAlignment = .center
+        $0.textColor = 0x000000.color
         $0.borderStyle = .none
         $0.attributedPlaceholder = NSAttributedString(
             string: "비밀번호",
@@ -55,8 +53,7 @@ final class SignUpView: BaseView {
     
     private var checkPassWordTextField = UITextField().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 17)
-        $0.textColor = 0xA09FA0.color
-        $0.textAlignment = .center
+        $0.textColor = 0x000000.color
         $0.borderStyle = .none
         $0.attributedPlaceholder = NSAttributedString(
             string: "비밀번호 확인",
@@ -68,7 +65,7 @@ final class SignUpView: BaseView {
         $0.backgroundColor = 0xA09FA0.color
     }
     
-    private var signUpButton = UIButton().then {
+    public var signUpButton = UIButton().then {
         $0.backgroundColor = 0xF6F6F6.color
         $0.setTitle("새로운 카카오계정 만들기", for: .normal)
         $0.setTitleColor(0x000000.color, for: .normal)
@@ -89,8 +86,8 @@ final class SignUpView: BaseView {
     override func setupConstraints() {
         
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(40)
-            $0.leading.trailing.equalTo(self.safeAreaLayoutGuide.snp.leading).inset(89)
+            $0.top.equalTo(self.safeAreaLayoutGuide).offset(40)
+            $0.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(89)
             $0.width.equalTo(197)
             $0.height.equalTo(25)
         }
@@ -126,7 +123,6 @@ final class SignUpView: BaseView {
         checkPassWordTextField.snp.makeConstraints {
             $0.top.equalTo(self.passWordUnderLineView.snp.bottom).offset(23)
             $0.leading.equalTo(self.emailTextField)
-            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-261)
         }
         
         checkPassWordUnderLineView.snp.makeConstraints {

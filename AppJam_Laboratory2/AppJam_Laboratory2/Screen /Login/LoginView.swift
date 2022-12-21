@@ -32,10 +32,9 @@ final class LoginView: BaseView {
         $0.textAlignment = .center
     }
     
-    private var emailTextField = UITextField().then {
+    public var emailTextField = UITextField().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 17)
         $0.textColor = 0x000000.color
-        $0.textAlignment = .center
         $0.borderStyle = .none
         $0.attributedPlaceholder = NSAttributedString(
             string: "이메일 또는 전화번호",
@@ -49,17 +48,19 @@ final class LoginView: BaseView {
     
     private var passwordTextField = UITextField().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 17)
-        $0.textColor = 0xA09FA0.color
-        $0.textAlignment = .center
+        $0.textColor = 0x000000.color
         $0.borderStyle = .none
-        $0.placeholder = "비밀번호"
+        $0.attributedPlaceholder = NSAttributedString(
+            string: "비밀번호",
+            attributes: [NSAttributedString.Key.foregroundColor : 0xA09FA0.color]
+        )
     }
     
     private var passWordUnderLineView = UIView().then {
         $0.backgroundColor = 0xA09FA0.color
     }
     
-    private var loginButton = UIButton().then {
+    public var loginButton = UIButton().then {
         $0.backgroundColor = 0xF6F6F6.color
         $0.setTitle("카카오계정 로그인", for: .normal)
         $0.setTitleColor(0x000000.color, for: .normal)
@@ -67,7 +68,7 @@ final class LoginView: BaseView {
         $0.titleLabel?.textAlignment = .center
     }
     
-    private var signUpButton = UIButton().then {
+    public var signUpButton = UIButton().then {
         $0.backgroundColor = 0xF6F6F6.color
         $0.setTitle("새로운 카카오계정 만들기", for: .normal)
         $0.setTitleColor(0x000000.color, for: .normal)
@@ -110,9 +111,6 @@ final class LoginView: BaseView {
         emailTextField.snp.makeConstraints {
             $0.top.equalTo(self.descriptionLabel.snp.bottom).offset(73)
             $0.leading.equalTo(self.safeAreaLayoutGuide).offset(21)
-            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-212)
-            $0.width.equalTo(142)
-            $0.height.equalTo(23)
         }
         
         emailUnderLineView.snp.makeConstraints {
@@ -126,9 +124,6 @@ final class LoginView: BaseView {
         passwordTextField.snp.makeConstraints {
             $0.top.equalTo(self.emailUnderLineView.snp.bottom).offset(23)
             $0.leading.equalTo(self.emailTextField)
-            $0.trailing.equalTo(self.safeAreaLayoutGuide).offset(-295)
-            $0.width.equalTo(59)
-            $0.height.equalTo(23)
         }
         
         passWordUnderLineView.snp.makeConstraints {
@@ -160,7 +155,6 @@ final class LoginView: BaseView {
             $0.height.equalTo(20)
         }
     }
-    
 }
 
 
