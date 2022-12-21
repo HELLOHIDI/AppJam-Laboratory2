@@ -26,7 +26,6 @@ final class SignUpView: BaseView {
     public var emailTextField = UITextField().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 17)
         $0.textColor = 0x000000.color
-        $0.textAlignment = .center
         $0.borderStyle = .none
         $0.attributedPlaceholder = NSAttributedString(
             string: "이메일 또는 전화번호",
@@ -41,7 +40,6 @@ final class SignUpView: BaseView {
     private var passwordTextField = UITextField().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 17)
         $0.textColor = 0xA09FA0.color
-        $0.textAlignment = .center
         $0.borderStyle = .none
         $0.attributedPlaceholder = NSAttributedString(
             string: "비밀번호",
@@ -56,7 +54,6 @@ final class SignUpView: BaseView {
     private var checkPassWordTextField = UITextField().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 17)
         $0.textColor = 0xA09FA0.color
-        $0.textAlignment = .center
         $0.borderStyle = .none
         $0.attributedPlaceholder = NSAttributedString(
             string: "비밀번호 확인",
