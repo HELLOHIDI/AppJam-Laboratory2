@@ -12,5 +12,27 @@ import SnapKit
 import SwiftyColor
 import Then
 
-final class ChatAdView: BaseView {}
+final class ChatAdView: BaseView {
+    
+    //MARK: - UI Components
+    
+    private var chatAdImageView = UIImageView().then {
+        $0.image = Image.adImage
+    }
+    
+    //MARK: - Custom Method
+    
+    override func setupView() {
+        addSubview(chatAdImageView)
+    }
+    
+    override func setupConstraints() {
+        chatAdImageView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(71.06)
+        }
+    }
+}
+
 

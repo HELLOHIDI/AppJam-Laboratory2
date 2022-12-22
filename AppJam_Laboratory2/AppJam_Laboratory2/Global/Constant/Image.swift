@@ -25,6 +25,7 @@ public enum Image {
     // Friend
     
     static let plus = UIImage(named: "ic_plus")!
+    static let adImage = UIImage(named: "chat_AdImage")!
     // Chat
 
 }
