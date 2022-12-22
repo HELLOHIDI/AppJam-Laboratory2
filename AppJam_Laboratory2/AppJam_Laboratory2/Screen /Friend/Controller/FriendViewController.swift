@@ -30,16 +30,35 @@ class FriendViewController: BaseViewController {
     }
     
     //MARK: - Custom Method
+    
     private func register() {
-        friendView.friendTableView.register(FriendTableViewCell.self, forCellReuseIdentifier: FriendTableViewCell.identifier)
+        friendView.friendTableView.register(
+            FriendTableViewCell.self, forCellReuseIdentifier: FriendTableViewCell.identifier)
+        friendView.friendTableView.register(
+            FriendHeaderView.self, forHeaderFooterViewReuseIdentifier: FriendHeaderView.identifier)
     }
 }
+
+//MARK: - UITablViewDelegate
 
 extension FriendView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 73
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(
+            withIdentifier: FriendHeaderView.identifier)
+                as? FriendHeaderView else { return UIView() }
+        return headerView
+    }
 }
+
+//MARK: - UITablViewDataSource
 
 extension FriendView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
