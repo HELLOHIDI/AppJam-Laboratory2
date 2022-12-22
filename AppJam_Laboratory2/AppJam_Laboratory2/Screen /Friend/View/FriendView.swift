@@ -39,10 +39,10 @@ final class FriendView: BaseView {
         }
         
         friendTableView.snp.makeConstraints {
-            $0.top.equalTo(self.friendTableView.snp.bottom)
+            $0.top.equalTo(self.friendTopView.snp.bottom)
             $0.bottom.equalToSuperview()
             $0.width.equalToSuperview()
-            //$0.height.equalTo()
+            $0.height.equalTo(friendDummyModel.count * 50 + 73)
         }
     }
 }

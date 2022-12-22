@@ -25,12 +25,14 @@ final class FriendHeaderView: UITableViewHeaderFooterView {
     }
     
     private let profileNameLabel = UILabel().then {
+        $0.text = "김솝트"
         $0.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 16)
         $0.textColor = 0x191919.color
     }
     
     private let profileMessageLabel = UILabel().then {
-        $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 11)
+        $0.text = "상태메시지는 여기에"
+        $0.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 11)
         $0.textColor = 0xA6A6A6.color
     }
     

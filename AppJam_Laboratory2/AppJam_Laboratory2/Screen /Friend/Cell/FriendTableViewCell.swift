@@ -28,7 +28,7 @@ final class FriendTableViewCell: UITableViewCell {
     }
     
     private let profileMessageLabel = UILabel().then {
-        $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 11)
+        $0.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 11)
         $0.textColor = 0xA6A6A6.color
     }
     
