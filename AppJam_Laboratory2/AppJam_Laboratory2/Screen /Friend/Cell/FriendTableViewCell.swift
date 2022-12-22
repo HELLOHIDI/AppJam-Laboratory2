@@ -75,7 +75,7 @@ final class FriendTableViewCell: UITableViewCell {
         }
     }
     
-    func dataBind(model: FriendModel){
+    func dataBind(model: FriendModel) {
         profileImageView.image = model.profileImage
         profileNameLabel.text = model.profileName
         profileMessageLabel.text = model.profileMessage

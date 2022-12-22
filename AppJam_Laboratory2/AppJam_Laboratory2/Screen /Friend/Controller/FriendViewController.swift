@@ -34,6 +34,7 @@ class FriendViewController: BaseViewController {
     private func register() {
         friendView.friendTableView.register(
             FriendTableViewCell.self, forCellReuseIdentifier: FriendTableViewCell.identifier)
+        
         friendView.friendTableView.register(
             FriendHeaderView.self, forHeaderFooterViewReuseIdentifier: FriendHeaderView.identifier)
     }
@@ -74,7 +75,5 @@ extension FriendView: UITableViewDataSource {
         friendCell.dataBind(model: friendDummyModel[indexPath.row])
         return friendCell
     }
-    
-    
 }
 
