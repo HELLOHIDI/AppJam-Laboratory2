@@ -18,6 +18,7 @@ final class FriendTableViewCell: UITableViewCell {
     static let identifier = "FriendTableViewCell"
     
     //MARK: - UI Components
+    
     private let profileImageView = UIImageView()
     
     private let profileNameLabel = UILabel().then {
@@ -42,8 +43,10 @@ final class FriendTableViewCell: UITableViewCell {
     
     //MARK: - Custom Method
     private func setupView() {
+        contentView.backgroundColor = .white
+        
         [profileImageView, profileNameLabel, profileMessageLabel].forEach{
-            addSubview($0)
+            contentView.addSubview($0)
         }
     }
     
