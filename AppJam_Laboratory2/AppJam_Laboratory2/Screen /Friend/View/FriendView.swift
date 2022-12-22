@@ -16,7 +16,7 @@ final class FriendView: BaseView{
     
     private let friendTopView = FriendTopView()
     
-    private lazy var friendTableView = UITableView().then {
+    public lazy var friendTableView = UITableView().then {
         $0.backgroundColor = .clear
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.separatorStyle = .none
