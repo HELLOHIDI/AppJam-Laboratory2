@@ -19,8 +19,10 @@ final class FriendTableViewCell: UITableViewCell {
     static let identifier = "FriendTableViewCell"
     
     //MARK: - UI Components
-    
-    private let profileImageView = UIImageView()
+
+    private let profileImageView = UIImageView().then {
+        $0.makeRounded(radius: 18)
+    }
     
     private let profileNameLabel = UILabel().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 12)
