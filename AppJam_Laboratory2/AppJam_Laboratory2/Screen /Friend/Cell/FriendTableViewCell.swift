@@ -30,4 +30,13 @@ final class FriendTableViewCell: UITableViewCell {
         $0.textColor = 0xA6A6A6.color
     }
     
+    //MARK: - Life Cycles
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
