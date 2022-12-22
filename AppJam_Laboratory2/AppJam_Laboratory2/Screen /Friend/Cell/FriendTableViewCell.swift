@@ -68,4 +68,10 @@ final class FriendTableViewCell: UITableViewCell {
             $0.leading.equalTo(self.profileNameLabel)
         }
     }
+    
+    func dataBind(model: FriendModel){
+        profileImageView.image = UIImage(named: model.profileImage)
+        profileNameLabel.text = model.profileName
+        profileMessageLabel.text = model.profileMessage
+    }
 }

@@ -8,9 +8,9 @@
 import Foundation
 
 struct FriendModel {
-    let profileImage: String?
-    let profileName: String?
-    let profileMessage: String?
+    let profileImage: String
+    let profileName: String
+    let profileMessage: String
 }
 
 var friendDummyModel: [FriendModel] = [
