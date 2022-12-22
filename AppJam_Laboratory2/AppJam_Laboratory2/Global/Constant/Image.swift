@@ -10,6 +10,7 @@ import UIKit
 public enum Image {
     
     static let setting = UIImage(named: "ic_setting")!
+    static let friendProfileImage = UIImage(named: "friend_profile")!
     static let friendProfileImage1 = UIImage(named: "friend_profile1")!
     static let friendProfileImage2 = UIImage(named: "friend_profile2")!
     static let friendProfileImage3 = UIImage(named: "friend_profile3")!

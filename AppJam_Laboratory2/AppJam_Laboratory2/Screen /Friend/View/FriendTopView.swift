@@ -24,7 +24,7 @@ final class FriendTopView: BaseView {
     }
     
     private var settingIcon = UIImageView().then {
-        $0.image = UIImage(named: "ic_setting")
+        $0.image = Image.setting
     }
     
     //MARK: - Custom Method
