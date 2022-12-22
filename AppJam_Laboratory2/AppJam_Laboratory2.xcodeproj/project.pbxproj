@@ -16,6 +16,7 @@
 		D2744C5329532FBB0068C0B2 /* FriendTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C5229532FBB0068C0B2 /* FriendTopView.swift */; };
 		D2744C55295332570068C0B2 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C54295332570068C0B2 /* Image.swift */; };
 		D2744C5729541BE70068C0B2 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C5629541BE70068C0B2 /* FriendModel.swift */; };
+		D2744C5A29541DD40068C0B2 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C5929541DD40068C0B2 /* FriendTableViewCell.swift */; };
 		D2B24BA129515E66005B0518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA029515E66005B0518 /* AppDelegate.swift */; };
 		D2B24BA329515E66005B0518 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA229515E66005B0518 /* SceneDelegate.swift */; };
 		D2B24BA529515E66005B0518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA429515E66005B0518 /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		D2744C5229532FBB0068C0B2 /* FriendTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTopView.swift; sourceTree = "<group>"; };
 		D2744C54295332570068C0B2 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		D2744C5629541BE70068C0B2 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		D2744C5929541DD40068C0B2 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		D2B24B9D29515E66005B0518 /* AppJam_Laboratory2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppJam_Laboratory2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B24BA029515E66005B0518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B24BA229515E66005B0518 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		D2744C4A29532B130068C0B2 /* Friend */ = {
 			isa = PBXGroup;
 			children = (
+				D2744C5829541DC00068C0B2 /* Cell */,
 				D2744C4D29532B2D0068C0B2 /* Model */,
 				D2744C4C29532B260068C0B2 /* Controller */,
 				D2744C4B29532B210068C0B2 /* View */,
@@ -163,6 +166,14 @@
 				D2744C5629541BE70068C0B2 /* FriendModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D2744C5829541DC00068C0B2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2744C5929541DD40068C0B2 /* FriendTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D2B24B9429515E66005B0518 = {
@@ -445,6 +456,7 @@
 				D2744C42295217C40068C0B2 /* SignUpView.swift in Sources */,
 				D2744C47295228A30068C0B2 /* WelcomeView.swift in Sources */,
 				D2B24BEA2951759C005B0518 /* LoginViewController.swift in Sources */,
+				D2744C5A29541DD40068C0B2 /* FriendTableViewCell.swift in Sources */,
 				D2744C44295217D10068C0B2 /* SignUpViewController.swift in Sources */,
 				D2B24BEF29518B0A005B0518 /* BaseViewController.swift in Sources */,
 				D2744C4F29532B6A0068C0B2 /* FriendView.swift in Sources */,
