@@ -17,7 +17,7 @@ final class ChatView: BaseView {
     //MARK: - UI Components
     
     private let chatTopView = ChatTopView()
-    private let chatAdView = ChatAdView()
+//    private let chatAdView = ChatAdView()
     
     public lazy var chatCollectionView = UICollectionView(
         frame: .zero, collectionViewLayout: UICollectionViewLayout()).then {
@@ -26,6 +26,27 @@ final class ChatView: BaseView {
             $0.isScrollEnabled = true
             $0.showsVerticalScrollIndicator = false
         }
+    
+    override func setupView() {
+        [chatTopView, chatCollectionView].forEach {
+            addSubview($0)
+        }
+    }
+    
+    override func setupConstraints() {
+        chatTopView.snp.makeConstraints{
+            $0.top.equalToSuperview()
+            $0.width.equalToSuperview()
+            $0.height.equalTo(52)
+        }
+        
+        chatCollectionView.snp.makeConstraints {
+            $0.top.equalTo(self.chatTopView.snp.bottom)
+            $0.width.equalToSuperview()
+            $0.height.equalTo(50 * chatDummyModel.count)
+            $0.bottom.equalToSuperview()
+        }
+    }
 }
 
 
