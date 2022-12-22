@@ -82,7 +82,7 @@ final class ChatCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    private func dataBind(model: FriendModel) {
+    public func dataBind(model: FriendModel) {
         profileImageView.image = model.profileImage
         profileNameLabel.text = model.profileName
         profileMessageLabel.text = model.profileMessage
