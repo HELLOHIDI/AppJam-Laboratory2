@@ -19,6 +19,9 @@
 		D2744C5A29541DD40068C0B2 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C5929541DD40068C0B2 /* FriendTableViewCell.swift */; };
 		D2744C5C29542B7B0068C0B2 /* FriendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C5B29542B7B0068C0B2 /* FriendHeaderView.swift */; };
 		D2744C5F295437B70068C0B2 /* UIView +Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C5E295437B70068C0B2 /* UIView +Extension.swift */; };
+		D2744C652954E7580068C0B2 /* ChatTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C642954E7580068C0B2 /* ChatTopView.swift */; };
+		D2744C672954E7640068C0B2 /* ChatAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C662954E7640068C0B2 /* ChatAdView.swift */; };
+		D2744C692954E7750068C0B2 /* ChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C682954E7750068C0B2 /* ChatCollectionView.swift */; };
 		D2B24BA129515E66005B0518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA029515E66005B0518 /* AppDelegate.swift */; };
 		D2B24BA329515E66005B0518 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA229515E66005B0518 /* SceneDelegate.swift */; };
 		D2B24BA529515E66005B0518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA429515E66005B0518 /* ViewController.swift */; };
@@ -69,6 +72,9 @@
 		D2744C5929541DD40068C0B2 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		D2744C5B29542B7B0068C0B2 /* FriendHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendHeaderView.swift; sourceTree = "<group>"; };
 		D2744C5E295437B70068C0B2 /* UIView +Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView +Extension.swift"; sourceTree = "<group>"; };
+		D2744C642954E7580068C0B2 /* ChatTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTopView.swift; sourceTree = "<group>"; };
+		D2744C662954E7640068C0B2 /* ChatAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAdView.swift; sourceTree = "<group>"; };
+		D2744C682954E7750068C0B2 /* ChatCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionView.swift; sourceTree = "<group>"; };
 		D2B24B9D29515E66005B0518 /* AppJam_Laboratory2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppJam_Laboratory2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B24BA029515E66005B0518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B24BA229515E66005B0518 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,16 +197,35 @@
 		D2744C602954E6CD0068C0B2 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				D2744C612954E6D50068C0B2 /* New Group */,
+				D2744C632954E7400068C0B2 /* View */,
+				D2744C622954E7300068C0B2 /* Controller */,
+				D2744C612954E6D50068C0B2 /* Cell */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
 		};
-		D2744C612954E6D50068C0B2 /* New Group */ = {
+		D2744C612954E6D50068C0B2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "New Group";
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D2744C622954E7300068C0B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D2744C632954E7400068C0B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2744C642954E7580068C0B2 /* ChatTopView.swift */,
+				D2744C662954E7640068C0B2 /* ChatAdView.swift */,
+				D2744C682954E7750068C0B2 /* ChatCollectionView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D2B24B9429515E66005B0518 = {
@@ -484,6 +509,7 @@
 				D2B24BE829517592005B0518 /* LoginView.swift in Sources */,
 				D2B24BED29518AB6005B0518 /* BaseView.swift in Sources */,
 				D2744C42295217C40068C0B2 /* SignUpView.swift in Sources */,
+				D2744C652954E7580068C0B2 /* ChatTopView.swift in Sources */,
 				D2744C47295228A30068C0B2 /* WelcomeView.swift in Sources */,
 				D2B24BEA2951759C005B0518 /* LoginViewController.swift in Sources */,
 				D2744C5A29541DD40068C0B2 /* FriendTableViewCell.swift in Sources */,
@@ -491,7 +517,9 @@
 				D2B24BEF29518B0A005B0518 /* BaseViewController.swift in Sources */,
 				D2744C5F295437B70068C0B2 /* UIView +Extension.swift in Sources */,
 				D2744C4F29532B6A0068C0B2 /* FriendView.swift in Sources */,
+				D2744C672954E7640068C0B2 /* ChatAdView.swift in Sources */,
 				D2B24BA329515E66005B0518 /* SceneDelegate.swift in Sources */,
+				D2744C692954E7750068C0B2 /* ChatCollectionView.swift in Sources */,
 				D2744C5C29542B7B0068C0B2 /* FriendHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
