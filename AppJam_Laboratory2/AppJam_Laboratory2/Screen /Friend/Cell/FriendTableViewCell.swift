@@ -15,6 +15,7 @@ import Then
 final class FriendTableViewCell: UITableViewCell {
     
     //MARK: - Properties
+    
     static let identifier = "FriendTableViewCell"
     
     //MARK: - UI Components
@@ -35,6 +36,8 @@ final class FriendTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupView()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -42,6 +45,7 @@ final class FriendTableViewCell: UITableViewCell {
     }
     
     //MARK: - Custom Method
+    
     private func setupView() {
         contentView.backgroundColor = .white
         
@@ -60,7 +64,7 @@ final class FriendTableViewCell: UITableViewCell {
         
         profileNameLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
-            $0.leading.equalTo(self.profileImageView.snp.leading).offset(11)
+            $0.leading.equalTo(self.profileImageView.snp.trailing).offset(11)
         }
         
         profileMessageLabel.snp.makeConstraints {
