@@ -12,7 +12,7 @@ import SnapKit
 import SwiftyColor
 import Then
 
-final class FriendView: BaseView{
+final class FriendView: BaseView {
     
     private let friendTopView = FriendTopView()
     
@@ -20,6 +20,8 @@ final class FriendView: BaseView{
         $0.backgroundColor = .clear
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.separatorStyle = .none
+        $0.delegate = self
+        $0.dataSource = self
     }
     
     override func setupView() {
