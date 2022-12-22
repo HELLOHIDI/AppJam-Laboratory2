@@ -35,4 +35,36 @@ final class ChatTopView: BaseView {
     private var settingIcon = UIImageView().then {
         $0.image = Image.setting
     }
+    
+    //MARK: - Custom Method
+    
+    override func setupView() {
+        [chatLabel, openChatLabel, plusButton, settingIcon].forEach {
+            addSubview($0)
+        }
+    }
+    
+    override func setupConstraints() {
+        chatLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(15)
+            $0.leading.equalToSuperview().offset(14)
+        }
+        
+        openChatLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(15)
+            $0.leading.equalTo(self.chatLabel.snp.trailing).offset(7)
+        }
+        
+        plusButton.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(17)
+            $0.leading.equalTo(self.openChatLabel.snp.trailing).offset(173)
+            $0.size.equalTo(19)
+        }
+        
+        settingIcon.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(17)
+            $0.leading.equalTo(self.plusButton.snp.trailing).offset(12)
+            $0.size.equalTo(19)
+        }
+    }
 }
