@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import UIKit
+
+import SnapKit
+import SwiftyColor
+import Then
+
+final class ChatAdView: BaseView {}
+

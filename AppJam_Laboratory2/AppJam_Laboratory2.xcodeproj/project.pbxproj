@@ -21,7 +21,8 @@
 		D2744C5F295437B70068C0B2 /* UIView +Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C5E295437B70068C0B2 /* UIView +Extension.swift */; };
 		D2744C652954E7580068C0B2 /* ChatTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C642954E7580068C0B2 /* ChatTopView.swift */; };
 		D2744C672954E7640068C0B2 /* ChatAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C662954E7640068C0B2 /* ChatAdView.swift */; };
-		D2744C692954E7750068C0B2 /* ChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C682954E7750068C0B2 /* ChatCollectionView.swift */; };
+		D2744C692954E7750068C0B2 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C682954E7750068C0B2 /* ChatCollectionViewCell.swift */; };
+		D2744C6B2954EB3B0068C0B2 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C6A2954EB3B0068C0B2 /* ChatView.swift */; };
 		D2B24BA129515E66005B0518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA029515E66005B0518 /* AppDelegate.swift */; };
 		D2B24BA329515E66005B0518 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA229515E66005B0518 /* SceneDelegate.swift */; };
 		D2B24BA529515E66005B0518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA429515E66005B0518 /* ViewController.swift */; };
@@ -74,7 +75,8 @@
 		D2744C5E295437B70068C0B2 /* UIView +Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView +Extension.swift"; sourceTree = "<group>"; };
 		D2744C642954E7580068C0B2 /* ChatTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTopView.swift; sourceTree = "<group>"; };
 		D2744C662954E7640068C0B2 /* ChatAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAdView.swift; sourceTree = "<group>"; };
-		D2744C682954E7750068C0B2 /* ChatCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionView.swift; sourceTree = "<group>"; };
+		D2744C682954E7750068C0B2 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2744C6A2954EB3B0068C0B2 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D2B24B9D29515E66005B0518 /* AppJam_Laboratory2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppJam_Laboratory2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B24BA029515E66005B0518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B24BA229515E66005B0518 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		D2744C612954E6D50068C0B2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D2744C682954E7750068C0B2 /* ChatCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -223,7 +226,7 @@
 			children = (
 				D2744C642954E7580068C0B2 /* ChatTopView.swift */,
 				D2744C662954E7640068C0B2 /* ChatAdView.swift */,
-				D2744C682954E7750068C0B2 /* ChatCollectionView.swift */,
+				D2744C6A2954EB3B0068C0B2 /* ChatView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 			files = (
 				D2B24BA529515E66005B0518 /* ViewController.swift in Sources */,
 				D2B24BA129515E66005B0518 /* AppDelegate.swift in Sources */,
+				D2744C6B2954EB3B0068C0B2 /* ChatView.swift in Sources */,
 				D2744C5129532B7A0068C0B2 /* FriendViewController.swift in Sources */,
 				D2744C49295228B20068C0B2 /* WelcomeViewController.swift in Sources */,
 				D2744C55295332570068C0B2 /* Image.swift in Sources */,
@@ -519,7 +523,7 @@
 				D2744C4F29532B6A0068C0B2 /* FriendView.swift in Sources */,
 				D2744C672954E7640068C0B2 /* ChatAdView.swift in Sources */,
 				D2B24BA329515E66005B0518 /* SceneDelegate.swift in Sources */,
-				D2744C692954E7750068C0B2 /* ChatCollectionView.swift in Sources */,
+				D2744C692954E7750068C0B2 /* ChatCollectionViewCell.swift in Sources */,
 				D2744C5C29542B7B0068C0B2 /* FriendHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
