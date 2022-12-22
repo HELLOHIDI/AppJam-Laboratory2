@@ -33,5 +33,9 @@ final class ChatCollectionViewCell: UICollectionViewCell {
         $0.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 11)
         $0.textColor = 0xA6A6A6.color
     }
+    
+    private let sendTime = UILabel().then {
+        $0.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 8)
+    }
 }
 
