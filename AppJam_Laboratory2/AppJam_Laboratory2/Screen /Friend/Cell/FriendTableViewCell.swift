@@ -39,4 +39,30 @@ final class FriendTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Custom Method
+    private func setupView() {
+        [profileImageView, profileNameLabel, profileMessageLabel].forEach{
+            addSubview($0)
+        }
+    }
+    
+    private func setupConstraints() {
+        profileImageView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(4)
+            $0.leading.equalToSuperview().offset(16)
+            $0.width.equalTo(44)
+            $0.height.equalTo(41)
+        }
+        
+        profileNameLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(10)
+            $0.leading.equalTo(self.profileImageView.snp.leading).offset(11)
+        }
+        
+        profileMessageLabel.snp.makeConstraints {
+            $0.top.equalTo(self.profileNameLabel.snp.bottom).offset(3)
+            $0.leading.equalTo(self.profileNameLabel)
+        }
+    }
 }
