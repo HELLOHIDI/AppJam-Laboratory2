@@ -81,5 +81,12 @@ final class ChatCollectionViewCell: UICollectionViewCell {
             $0.trailing.equalToSuperview().inset(16)
         }
     }
+    
+    private func dataBind(model: FriendModel) {
+        profileImageView.image = model.profileImage
+        profileNameLabel.text = model.profileName
+        profileMessageLabel.text = model.profileMessage
+        sendTimeLabel.text = model.sendTime
+    }
 }
 
