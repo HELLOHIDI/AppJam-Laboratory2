@@ -140,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				D2744C5829541DC00068C0B2 /* Cell */,
-				D2744C4D29532B2D0068C0B2 /* Model */,
 				D2744C4C29532B260068C0B2 /* Controller */,
 				D2744C4B29532B210068C0B2 /* View */,
 			);
@@ -189,6 +188,21 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		D2744C602954E6CD0068C0B2 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				D2744C612954E6D50068C0B2 /* New Group */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		D2744C612954E6D50068C0B2 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		D2B24B9429515E66005B0518 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +226,7 @@
 		D2B24B9F29515E66005B0518 /* AppJam_Laboratory2 */ = {
 			isa = PBXGroup;
 			children = (
+				D2744C4D29532B2D0068C0B2 /* Model */,
 				D2B24BD329515F68005B0518 /* Screen  */,
 				D2B24BD229515F5F005B0518 /* Network */,
 				D2B24BD129515F53005B0518 /* Resource */,
@@ -271,6 +286,7 @@
 		D2B24BD329515F68005B0518 /* Screen  */ = {
 			isa = PBXGroup;
 			children = (
+				D2744C602954E6CD0068C0B2 /* Chat */,
 				D2744C4A29532B130068C0B2 /* Friend */,
 				D2744C45295228920068C0B2 /* Welcome */,
 				D2744C40295217A80068C0B2 /* SignUp */,
