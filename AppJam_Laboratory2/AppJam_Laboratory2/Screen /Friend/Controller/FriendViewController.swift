@@ -36,7 +36,9 @@ class FriendViewController: BaseViewController {
 }
 
 extension FriendView: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
 }
 
 extension FriendView: UITableViewDataSource {
