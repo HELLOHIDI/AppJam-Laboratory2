@@ -12,7 +12,9 @@ import SnapKit
 import SwiftyColor
 import Then
 
-final class ChatAdView: BaseView {
+final class ChatAdView: UICollectionReusableView {
+    
+    static let identifier = "ChatAdView"
     
     //MARK: - UI Components
     
@@ -20,13 +22,24 @@ final class ChatAdView: BaseView {
         $0.image = Image.adImage
     }
     
+    //MARK: - Life Cycles
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+        setupConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     //MARK: - Custom Method
     
-    override func setupView() {
+    private func setupView() {
         addSubview(chatAdImageView)
     }
     
-    override func setupConstraints() {
+    private func setupConstraints() {
         chatAdImageView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(16)

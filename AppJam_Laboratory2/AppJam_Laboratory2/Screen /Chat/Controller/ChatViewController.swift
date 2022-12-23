@@ -35,6 +35,8 @@ final class ChatViewController: BaseViewController {
         chatView.chatCollectionView.register(
             ChatCollectionViewCell.self,
             forCellWithReuseIdentifier: ChatCollectionViewCell.identifier)
+        
+        chatView.chatCollectionView.register(ChatAdView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ChatAdView.identifier)
     }
 }
 
@@ -45,6 +47,10 @@ extension ChatView: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: 71.06)
     }
 }
 
@@ -63,5 +69,11 @@ extension ChatView: UICollectionViewDataSource {
                 as? ChatCollectionViewCell else { return UICollectionViewCell() }
         chatCell.dataBind(model: chatDummyModel[indexPath.item])
         return chatCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader,
+              let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ChatAdView.identifier, for: indexPath) as? ChatAdView else { return UICollectionReusableView() }
+        return header
     }
 }
