@@ -39,20 +39,29 @@ final class ChatViewController: BaseViewController {
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout
+
 extension ChatView: UICollectionViewDelegateFlowLayout {
-    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: 50)
+    }
 }
 
+//MARK: - UICollectionViewDataSource
+
 extension ChatView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int)->
+    Int {
         return chatDummyModel.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
+    -> UICollectionViewCell {
         guard let chatCell = collectionView.dequeueReusableCell(
             withReuseIdentifier: ChatCollectionViewCell.identifier, for: indexPath)
                 as? ChatCollectionViewCell else { return UICollectionViewCell() }
-        chatCell.dataBind(model: chatDummyModel[indexPath.row])
+        chatCell.dataBind(model: chatDummyModel[indexPath.item])
         return chatCell
     }
 }

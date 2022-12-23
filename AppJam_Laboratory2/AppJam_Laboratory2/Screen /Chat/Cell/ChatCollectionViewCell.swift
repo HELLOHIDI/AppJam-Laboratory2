@@ -36,6 +36,7 @@ final class ChatCollectionViewCell: UICollectionViewCell {
     
     private let sendTimeLabel = UILabel().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 8)
+        $0.textColor = 0xA6A6A6.color
     }
     
     //MARK: - Life Cycles
@@ -53,6 +54,8 @@ final class ChatCollectionViewCell: UICollectionViewCell {
     //MARK: - Custom Method
     
     private func setupView() {
+        contentView.backgroundColor = .white
+        
         [profileImageView, profileNameLabel, profileMessageLabel, sendTimeLabel].forEach{
             contentView.addSubview($0)
         }
