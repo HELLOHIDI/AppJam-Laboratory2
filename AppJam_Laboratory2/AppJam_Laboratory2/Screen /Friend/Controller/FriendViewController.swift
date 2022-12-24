@@ -40,7 +40,7 @@ class FriendViewController: BaseViewController {
     }
 }
 
-//MARK: - UITablViewDelegate
+//MARK: - UITableViewDelegate
 
 extension FriendView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -59,7 +59,7 @@ extension FriendView: UITableViewDelegate {
     }
 }
 
-//MARK: - UITablViewDataSource
+//MARK: - UITableViewDataSource
 
 extension FriendView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) ->
