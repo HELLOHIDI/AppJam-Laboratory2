@@ -15,7 +15,6 @@ import Then
 final class FriendView: BaseView {
     
     private let friendTopView = FriendTopView()
-    private let friendHeaderView = FriendHeaderView()
     
     public lazy var friendTableView = UITableView(frame: .zero, style: .grouped).then {
         $0.backgroundColor = .clear

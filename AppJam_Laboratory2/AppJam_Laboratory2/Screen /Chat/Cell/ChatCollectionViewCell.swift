@@ -54,8 +54,6 @@ final class ChatCollectionViewCell: UICollectionViewCell {
     //MARK: - Custom Method
     
     private func setupView() {
-        contentView.backgroundColor = .yellow
-        
         [profileImageView, profileNameLabel, profileMessageLabel, sendTimeLabel].forEach{
             contentView.addSubview($0)
         }
