@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - SignupReponseDto
+// MARK: - SignupResponseDto
 
 struct SignupReponseDto: Codable {
     let statusCode: Int
@@ -16,7 +16,17 @@ struct SignupReponseDto: Codable {
     let data: DataClass
 }
 
+// MARK: - LoginResponseDto
+
+struct LoginReponseDto: Codable {
+    let statusCode: Int
+    let success: Bool
+    let message: String
+    let data: DataClass
+}
+
 // MARK: - DataClass
+
 struct DataClass: Codable {
     let id: Int
     let emailOrContact: String

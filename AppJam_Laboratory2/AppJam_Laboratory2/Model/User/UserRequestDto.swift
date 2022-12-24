@@ -15,4 +15,10 @@ struct SignupRequestDto: Codable {
     let passwordCheck: String
 }
 
-// 
+// MARK: - LoginRequestDto
+
+struct LoginRequestDto: Codable {
+    let emailOrContact: String
+    let password: String
+    let passwordCheck: String
+}
