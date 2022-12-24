@@ -12,6 +12,6 @@ import Foundation
 public enum URLs {
     
     public static let baseURL = "http://3.34.53.11:8080"
-    public static let signUp = "/signUp"
-    public static let login = "/login"
+    public static let signUp = "{\(baseURL)}/v1/login"
+    public static let login = "/v1/login"
 }
