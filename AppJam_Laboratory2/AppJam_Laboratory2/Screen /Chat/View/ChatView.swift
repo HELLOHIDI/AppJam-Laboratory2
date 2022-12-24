@@ -20,7 +20,7 @@ final class ChatView: BaseView {
     
     public lazy var chatCollectionView = UICollectionView(
         frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
-            $0.backgroundColor = .white
+            $0.backgroundColor = .blue
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.isScrollEnabled = true
             $0.showsVerticalScrollIndicator = false

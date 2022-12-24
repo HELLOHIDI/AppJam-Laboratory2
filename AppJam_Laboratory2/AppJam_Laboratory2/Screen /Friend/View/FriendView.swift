@@ -42,7 +42,6 @@ final class FriendView: BaseView {
             $0.top.equalTo(self.friendTopView.snp.bottom)
             $0.bottom.equalToSuperview()
             $0.width.equalToSuperview()
-            $0.height.equalTo(friendDummyModel.count * 50 + 73)
         }
     }
 }

@@ -49,15 +49,27 @@ extension ChatView: UICollectionViewDelegateFlowLayout {
         return CGSize(width: UIScreen.main.bounds.width, height: 50)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 71.06)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 8.94, left: 0, bottom: 0, right: 0)
     }
 }
 
 //MARK: - UICollectionViewDataSource
 
 extension ChatView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int)->
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) ->
     Int {
         return chatDummyModel.count
     }
