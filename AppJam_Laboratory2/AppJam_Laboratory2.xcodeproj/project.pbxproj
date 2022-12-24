@@ -11,6 +11,7 @@
 		D25BB80629574DAA003FB31B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80529574DAA003FB31B /* UserService.swift */; };
 		D25BB80A29574E52003FB31B /* UserRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80929574E52003FB31B /* UserRequestDto.swift */; };
 		D25BB80C29574E5F003FB31B /* UserResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80B29574E5F003FB31B /* UserResponseDto.swift */; };
+		D25BB80E295754C0003FB31B /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80D295754C0003FB31B /* URLs.swift */; };
 		D2744C42295217C40068C0B2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C41295217C40068C0B2 /* SignUpView.swift */; };
 		D2744C44295217D10068C0B2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C43295217D10068C0B2 /* SignUpViewController.swift */; };
 		D2744C47295228A30068C0B2 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C46295228A30068C0B2 /* WelcomeView.swift */; };
@@ -30,7 +31,6 @@
 		D2744C6D2954F17E0068C0B2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C6C2954F17E0068C0B2 /* ChatViewController.swift */; };
 		D2B24BA129515E66005B0518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA029515E66005B0518 /* AppDelegate.swift */; };
 		D2B24BA329515E66005B0518 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA229515E66005B0518 /* SceneDelegate.swift */; };
-		D2B24BA529515E66005B0518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA429515E66005B0518 /* ViewController.swift */; };
 		D2B24BA829515E66005B0518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B24BA629515E66005B0518 /* Main.storyboard */; };
 		D2B24BAA29515E67005B0518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B24BA929515E67005B0518 /* Assets.xcassets */; };
 		D2B24BAD29515E67005B0518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B24BAB29515E67005B0518 /* LaunchScreen.storyboard */; };
@@ -70,6 +70,7 @@
 		D25BB80529574DAA003FB31B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D25BB80929574E52003FB31B /* UserRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestDto.swift; sourceTree = "<group>"; };
 		D25BB80B29574E5F003FB31B /* UserResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDto.swift; sourceTree = "<group>"; };
+		D25BB80D295754C0003FB31B /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		D2744C41295217C40068C0B2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		D2744C43295217D10068C0B2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D2744C46295228A30068C0B2 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 		D2B24B9D29515E66005B0518 /* AppJam_Laboratory2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppJam_Laboratory2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B24BA029515E66005B0518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B24BA229515E66005B0518 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D2B24BA429515E66005B0518 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2B24BA729515E66005B0518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2B24BA929515E67005B0518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2B24BAC29515E67005B0518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -297,7 +297,6 @@
 				D2B24BD229515F5F005B0518 /* Network */,
 				D2B24BD129515F53005B0518 /* Resource */,
 				D2B24BD029515F44005B0518 /* Global */,
-				D2B24BA429515E66005B0518 /* ViewController.swift */,
 			);
 			path = AppJam_Laboratory2;
 			sourceTree = "<group>";
@@ -367,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				D2744C54295332570068C0B2 /* Image.swift */,
+				D25BB80D295754C0003FB31B /* URLs.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -541,10 +541,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2B24BA529515E66005B0518 /* ViewController.swift in Sources */,
 				D2B24BA129515E66005B0518 /* AppDelegate.swift in Sources */,
 				D2744C6B2954EB3B0068C0B2 /* ChatView.swift in Sources */,
 				D2744C5129532B7A0068C0B2 /* FriendViewController.swift in Sources */,
+				D25BB80E295754C0003FB31B /* URLs.swift in Sources */,
 				D2744C49295228B20068C0B2 /* WelcomeViewController.swift in Sources */,
 				D2744C55295332570068C0B2 /* Image.swift in Sources */,
 				D25BB80629574DAA003FB31B /* UserService.swift in Sources */,
