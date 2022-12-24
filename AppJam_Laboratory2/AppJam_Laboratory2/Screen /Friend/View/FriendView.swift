@@ -15,7 +15,6 @@ import Then
 final class FriendView: BaseView {
     
     private let friendTopView = FriendTopView()
-    private let friendHeaderView = FriendHeaderView()
     
     public lazy var friendTableView = UITableView(frame: .zero, style: .grouped).then {
         $0.backgroundColor = .clear
@@ -42,7 +41,6 @@ final class FriendView: BaseView {
             $0.top.equalTo(self.friendTopView.snp.bottom)
             $0.bottom.equalToSuperview()
             $0.width.equalToSuperview()
-            $0.height.equalTo(friendDummyModel.count * 50 + 73)
         }
     }
 }

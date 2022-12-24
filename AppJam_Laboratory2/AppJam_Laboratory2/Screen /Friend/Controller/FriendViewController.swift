@@ -40,7 +40,7 @@ class FriendViewController: BaseViewController {
     }
 }
 
-//MARK: - UITablViewDelegate
+//MARK: - UITableViewDelegate
 
 extension FriendView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -59,17 +59,18 @@ extension FriendView: UITableViewDelegate {
     }
 }
 
-//MARK: - UITablViewDataSource
+//MARK: - UITableViewDataSource
 
 extension FriendView: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) ->
+    Int {
         return friendDummyModel.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
+    UITableViewCell {
         guard let friendCell = tableView.dequeueReusableCell(
-            withIdentifier: FriendTableViewCell.identifier,
-            for: indexPath)
+            withIdentifier: FriendTableViewCell.identifier, for: indexPath)
                 as? FriendTableViewCell else { return UITableViewCell() }
         
         friendCell.dataBind(model: friendDummyModel[indexPath.row])
