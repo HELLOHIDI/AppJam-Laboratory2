@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+// MARK: - SignupRequestDto
+
+struct SignupRequestDto: Codable {
+    let emailOrContact: String
+    let password: String
+    let passwordCheck: String
+}
+
+// 
