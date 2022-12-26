@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - SignupResponseDto
 
-struct SignupReponseDto: Codable {
+struct SignupResponseDto: Codable {
     let statusCode: Int
     let success: Bool
     let message: String
@@ -18,7 +18,7 @@ struct SignupReponseDto: Codable {
 
 // MARK: - LoginResponseDto
 
-struct LoginReponseDto: Codable {
+struct LoginResponseDto: Codable {
     let statusCode: Int
     let success: Bool
     let message: String
