@@ -20,47 +20,38 @@ final class UserAPI: BaseAPI {
 }
 
 extension UserAPI{
-    func signUp(param: SignupRequestDto, completion: @escaping ((SignupResponseDto?, Error?) -> ())) {
-        userProvider.request(.signUp(param: param)) { [weak self] response in
-            switch response {
-            case .success(let result):
-                do {
-                    self?.signupResponse = try result.map(GenericResponse<SignupResponseDto>.self)
-                    guard let signupData = self?.signupResponse?.data else {
-                        completion(nil, Error.self as? Error)
-                        return
-                    }
-                    completion(signupData, nil)
-                } catch(let err) {
-                    print(err.localizedDescription)
-                    completion(nil, err)
-                }
+    func signUp(param: SignupRequestDto, completion: @escaping (NetworkResult<Any>) -> Void) {
+        userProvider.request(.signUp(param: param)) { (result) in
+            switch result {
+            case .success(let response):
+                let statusCode = response.statusCode
+                let data = response.data
+                let networkResult = self.judgeStatus(by: statusCode, data, UserDataClass.self)
+                completion(networkResult)
             case .failure(let err):
-                print(err.localizedDescription)
-                completion(nil, err)
+                print(err)
             }
-            
         }
-    }
-    
-    func login(param: LoginRequestDto, completion: @escaping ((LoginResponseDto?, Error?) -> ())) {
-        userProvider.request(.login(param: param)) { [weak self] response in
-            switch response {
-            case .success(let result):
-                do {
-                    self?.loginResponse = try result.map(GenericResponse<LoginResponseDto>.self)
-                    guard let loginData = self?.loginResponse?.data else {
-                        completion(nil, Error.self as? Error)
-                        return
+        
+        func login(param: LoginRequestDto, completion: @escaping ((LoginResponseDto?, Error?) -> ())) {
+            userProvider.request(.login(param: param)) { [weak self] response in
+                switch response {
+                case .success(let result):
+                    do {
+                        self?.loginResponse = try result.map(GenericResponse<LoginResponseDto>.self)
+                        guard let loginData = self?.loginResponse?.data else {
+                            completion(nil, Error.self as? Error)
+                            return
+                        }
+                        completion(loginData, nil)
+                    } catch(let err) {
+                        print(err.localizedDescription)
+                        completion(nil, err)
                     }
-                    completion(loginData, nil)
-                } catch(let err) {
+                case .failure(let err):
                     print(err.localizedDescription)
                     completion(nil, err)
                 }
-            case .failure(let err):
-                print(err.localizedDescription)
-                completion(nil, err)
             }
         }
     }

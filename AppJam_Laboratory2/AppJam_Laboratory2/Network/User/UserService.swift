@@ -18,7 +18,7 @@ extension UserService: BaseTargetType {
     var path: String {
         switch self {
         case .signUp(param: _):
-            return "/v1/signUp"
+            return "/v1/signup"
         case .login:
             return "/v1/login"
         }
@@ -41,6 +41,4 @@ extension UserService: BaseTargetType {
             return .requestJSONEncodable(param)
         }
     }
-    
-    
 }

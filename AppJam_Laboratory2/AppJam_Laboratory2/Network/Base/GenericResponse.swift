@@ -20,6 +20,7 @@ struct GenericResponse<T: Codable>: Codable {
         case data
     }
     
+    // Q. 왜 self를 붙인건지..?
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         message = (try? values.decode(String.self, forKey: .message)) ?? ""

@@ -13,7 +13,7 @@ struct SignupResponseDto: Codable {
     let statusCode: Int
     let success: Bool
     let message: String
-    let data: DataClass
+    let data: UserDataClass
 }
 
 // MARK: - LoginResponseDto
@@ -22,12 +22,12 @@ struct LoginResponseDto: Codable {
     let statusCode: Int
     let success: Bool
     let message: String
-    let data: DataClass
+    let data: UserDataClass
 }
 
 // MARK: - DataClass
 
-struct DataClass: Codable {
+struct UserDataClass: Codable {
     let id: Int
     let emailOrContact: String
 }
