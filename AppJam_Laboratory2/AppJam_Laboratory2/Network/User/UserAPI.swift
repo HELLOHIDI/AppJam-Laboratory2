@@ -32,27 +32,22 @@ extension UserAPI{
                 print(err)
             }
         }
-        
-        func login(param: LoginRequestDto, completion: @escaping ((LoginResponseDto?, Error?) -> ())) {
-            userProvider.request(.login(param: param)) { [weak self] response in
-                switch response {
-                case .success(let result):
-                    do {
-                        self?.loginResponse = try result.map(GenericResponse<LoginResponseDto>.self)
-                        guard let loginData = self?.loginResponse?.data else {
-                            completion(nil, Error.self as? Error)
-                            return
-                        }
-                        completion(loginData, nil)
-                    } catch(let err) {
-                        print(err.localizedDescription)
-                        completion(nil, err)
-                    }
-                case .failure(let err):
-                    print(err.localizedDescription)
-                    completion(nil, err)
-                }
+    }
+    
+    func login(param: LoginRequestDto, completion: @escaping (NetworkResult<Any>) -> Void) {
+        userProvider.request(.login(param: param)) { (result) in
+            switch result {
+            case .success(let response):
+                let statusCode = response.statusCode
+                let data = response.data
+                let networkResult = self.judgeStatus(by: statusCode, data, UserDataClass.self)
+                completion(networkResult)
+            case .failure(let err):
+                print(err)
             }
         }
     }
 }
+
+
+
