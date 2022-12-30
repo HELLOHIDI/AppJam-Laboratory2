@@ -20,5 +20,4 @@ struct SignupRequestDto: Codable {
 struct LoginRequestDto: Codable {
     let emailOrContact: String
     let password: String
-    let passwordCheck: String
 }
