@@ -45,6 +45,7 @@ extension GalleryView: UICollectionViewDataSource {
         guard let galleryCell = collectionView.dequeueReusableCell(
             withReuseIdentifier: GalleryCollectionViewCell.identifier, for: indexPath) as?
                 GalleryCollectionViewCell else { return UICollectionViewCell() }
+        galleryCell.dataBind(model: galleryDummyModel[indexPath.item])
         return galleryCell
     }
 }

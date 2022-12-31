@@ -40,4 +40,8 @@ class GalleryCollectionViewCell: UICollectionViewCell {
             $0.edges.equalToSuperview()
         }
     }
+    
+    public func dataBind(model: GalleryModel){
+        galleryImageView.image = model.galleryImage
+    }
 }
