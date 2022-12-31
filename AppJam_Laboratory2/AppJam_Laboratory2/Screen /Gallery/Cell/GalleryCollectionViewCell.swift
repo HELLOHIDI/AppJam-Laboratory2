@@ -16,12 +16,16 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     //MARK: - UI Components
     
-    private var galleryImageView = UIImageView()
+    private var galleryImageView = UIImageView().then {
+        $0.backgroundColor = .white
+    }
     
     //MARK: - Life Cycles
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupView()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -37,7 +41,9 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     private func setupConstraints() {
         galleryImageView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.size.equalTo(119)
         }
     }
     

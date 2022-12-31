@@ -17,6 +17,7 @@ final class GalleryView: BaseView {
     
     public lazy var galleryCollectionView = UICollectionView(
         frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+            $0.backgroundColor = .white
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.isScrollEnabled = true
             $0.showsVerticalScrollIndicator = false
