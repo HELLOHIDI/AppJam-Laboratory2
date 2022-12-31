@@ -40,5 +40,23 @@ public enum Image {
     static let iconTabShopFilled = UIImage(named: "tab_ic_TabShopFilled")
     static let iconTabMoreFilled = UIImage(named: "tab_ic_TabMoreFilled")
     // Tabbar
+    
+    static let galleryImage1 = UIImage(named: "galleryImage1")!
+    static let galleryImage2 = UIImage(named: "galleryImage2")!
+    static let galleryImage3 = UIImage(named: "galleryImage3")!
+    static let galleryImage4 = UIImage(named: "galleryImage4")!
+    static let galleryImage5 = UIImage(named: "galleryImage5")!
+    static let galleryImage6 = UIImage(named: "galleryImage6")!
+    static let galleryImage7 = UIImage(named: "galleryImage7")!
+    static let galleryImage8 = UIImage(named: "galleryImage8")!
+    static let galleryImage9 = UIImage(named: "galleryImage9")!
+    static let galleryImage10 = UIImage(named: "galleryImage10")!
+    static let galleryImage11 = UIImage(named: "galleryImage11")!
+    static let galleryImage12 = UIImage(named: "galleryImage12")!
+    static let galleryImage13 = UIImage(named: "galleryImage13")!
+    static let galleryImage14 = UIImage(named: "galleryImage14")!
+    static let galleryImage15 = UIImage(named: "galleryImage15")!
+    static let galleryImage16 = UIImage(named: "galleryImage16")!
+    static let galleryImage17 = UIImage(named: "galleryImage17")!
 
 }

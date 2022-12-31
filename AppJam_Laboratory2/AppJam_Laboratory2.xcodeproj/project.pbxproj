@@ -11,6 +11,7 @@
 		D2415C8C296020CC00AFDE2E /* SharpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2415C8B296020CC00AFDE2E /* SharpViewController.swift */; };
 		D2415C8E296020DB00AFDE2E /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2415C8D296020DB00AFDE2E /* ShopViewController.swift */; };
 		D2415C90296020E700AFDE2E /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2415C8F296020E700AFDE2E /* MoreViewController.swift */; };
+		D2415C972960275000AFDE2E /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2415C962960275000AFDE2E /* GalleryModel.swift */; };
 		D25BB80429574D9F003FB31B /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80329574D9F003FB31B /* UserAPI.swift */; };
 		D25BB80629574DAA003FB31B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80529574DAA003FB31B /* UserService.swift */; };
 		D25BB80A29574E52003FB31B /* UserRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80929574E52003FB31B /* UserRequestDto.swift */; };
@@ -79,6 +80,7 @@
 		D2415C8B296020CC00AFDE2E /* SharpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharpViewController.swift; sourceTree = "<group>"; };
 		D2415C8D296020DB00AFDE2E /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		D2415C8F296020E700AFDE2E /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		D2415C962960275000AFDE2E /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
 		D25BB80329574D9F003FB31B /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		D25BB80529574DAA003FB31B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D25BB80929574E52003FB31B /* UserRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestDto.swift; sourceTree = "<group>"; };
@@ -186,6 +188,45 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		D2415C912960272100AFDE2E /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				D2415C942960273800AFDE2E /* Cell */,
+				D2415C932960272D00AFDE2E /* Controller */,
+				D2415C922960272700AFDE2E /* View */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		D2415C922960272700AFDE2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D2415C932960272D00AFDE2E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D2415C942960273800AFDE2E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D2415C952960274600AFDE2E /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				D2415C962960275000AFDE2E /* GalleryModel.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
 		D25BB80229574D87003FB31B /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +315,7 @@
 		D2744C4D29532B2D0068C0B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D2415C952960274600AFDE2E /* Gallery */,
 				D25BB80829574E2B003FB31B /* Friend */,
 				D25BB80729574E23003FB31B /* User */,
 			);
@@ -416,6 +458,7 @@
 		D2B24BD329515F68005B0518 /* Screen  */ = {
 			isa = PBXGroup;
 			children = (
+				D2415C912960272100AFDE2E /* Gallery */,
 				D2415C8A296020BE00AFDE2E /* More */,
 				D2415C89296020B700AFDE2E /* Shop */,
 				D2415C882960209F00AFDE2E /* Sharp */,
@@ -634,6 +677,7 @@
 				D2744C44295217D10068C0B2 /* SignUpViewController.swift in Sources */,
 				D2B24BEF29518B0A005B0518 /* BaseViewController.swift in Sources */,
 				D2744C5F295437B70068C0B2 /* UIView +Extension.swift in Sources */,
+				D2415C972960275000AFDE2E /* GalleryModel.swift in Sources */,
 				D25BB81B29575CB0003FB31B /* NetworkResult.swift in Sources */,
 				D2744C4F29532B6A0068C0B2 /* FriendView.swift in Sources */,
 				D2415C8C296020CC00AFDE2E /* SharpViewController.swift in Sources */,
