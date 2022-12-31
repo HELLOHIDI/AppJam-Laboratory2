@@ -16,10 +16,15 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     //MARK: - UI Components
     
-    private var galleryImageView = UIImageView().then {
+    public var galleryImageView = UIImageView().then {
         $0.backgroundColor = .white
     }
     
+    public var indexView = UIView().then {
+        $0.backgroundColor = 0xF6DD2A.color
+        $0.makeRounded(radius: 9)
+        $0.isHidden = true
+    }
     //MARK: - Life Cycles
     
     override init(frame: CGRect) {
@@ -37,6 +42,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     private func setupView() {
         contentView.backgroundColor = .white
         contentView.addSubview(galleryImageView)
+        galleryImageView.addSubview(indexView)
     }
     
     private func setupConstraints() {
@@ -45,9 +51,21 @@ class GalleryCollectionViewCell: UICollectionViewCell {
             $0.leading.equalToSuperview()
             $0.size.equalTo(119)
         }
+        
+        indexView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(4)
+            $0.leading.equalToSuperview().offset(97)
+            $0.size.equalTo(18)
+        }
     }
     
     public func dataBind(model: GalleryModel){
         galleryImageView.image = model.galleryImage
+    }
+    
+    public func selectedPhoto() {
+        galleryImageView.layer.borderWidth = 3
+        galleryImageView.layer.borderColor = 0xF6DD2A.color.cgColor
+        indexView.isHidden = false
     }
 }

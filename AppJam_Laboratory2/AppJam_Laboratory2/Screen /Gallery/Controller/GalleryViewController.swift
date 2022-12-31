@@ -8,6 +8,7 @@
 import UIKit
 
 import SnapKit
+import SwiftyColor
 import Then
 
 final class GalleryViewController : BaseViewController{
@@ -49,6 +50,11 @@ extension GalleryView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 9
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell  = collectionView.cellForItem(at: indexPath) as! GalleryCollectionViewCell
+        cell.selectedPhoto()
     }
 }
 
