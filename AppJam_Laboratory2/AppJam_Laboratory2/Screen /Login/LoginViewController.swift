@@ -28,10 +28,9 @@ final class LoginViewController: BaseViewController {
     
     //MARK: - Custom Method
     
-    private func presentToWelcomeView() {
+    private func presentToWelcomeView(email: String) {
         let welcomeViewController = WelcomeViewController()
         welcomeViewController.modalPresentationStyle = .formSheet
-        guard let email = loginView.emailTextField.text else { return }
         welcomeViewController.dataSend(email: email)
         self.present(welcomeViewController, animated: true)
     }
@@ -45,11 +44,35 @@ final class LoginViewController: BaseViewController {
     
     @objc
     private func gotoWelcomeView() {
-        presentToWelcomeView()
+        postLogin()
     }
     
     @objc
     private func gotoSignUpView() {
         pushToSignUpView()
+    }
+}
+
+extension LoginViewController {
+    func postLogin() {
+        guard let email = loginView.emailTextField.text else { return }
+        guard let password = loginView.passwordTextField.text else { return }
+        let param = LoginRequestDto(emailOrContact: email, password: password)
+        UserAPI.shared.login(param: param, completion: { (result) in
+            switch result {
+            case .success:
+                self.presentToWelcomeView(email: email)
+            case .requestErr(_):
+                print("requestErr")
+            case .decodedErr:
+                print("decodedErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        })
     }
 }

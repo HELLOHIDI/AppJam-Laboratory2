@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D25BB80429574D9F003FB31B /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80329574D9F003FB31B /* UserAPI.swift */; };
+		D25BB80629574DAA003FB31B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80529574DAA003FB31B /* UserService.swift */; };
+		D25BB80A29574E52003FB31B /* UserRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80929574E52003FB31B /* UserRequestDto.swift */; };
+		D25BB80C29574E5F003FB31B /* UserResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80B29574E5F003FB31B /* UserResponseDto.swift */; };
+		D25BB81129575BFE003FB31B /* APIEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB81029575BFE003FB31B /* APIEnviroment.swift */; };
+		D25BB81329575C2F003FB31B /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB81229575C2F003FB31B /* BaseAPI.swift */; };
+		D25BB81529575C4A003FB31B /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB81429575C4A003FB31B /* BaseTargetType.swift */; };
+		D25BB81729575C6D003FB31B /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB81629575C6D003FB31B /* GenericResponse.swift */; };
+		D25BB81929575C8F003FB31B /* MoyaLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB81829575C8F003FB31B /* MoyaLoggingPlugin.swift */; };
+		D25BB81B29575CB0003FB31B /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB81A29575CB0003FB31B /* NetworkResult.swift */; };
 		D2744C42295217C40068C0B2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C41295217C40068C0B2 /* SignUpView.swift */; };
 		D2744C44295217D10068C0B2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C43295217D10068C0B2 /* SignUpViewController.swift */; };
 		D2744C47295228A30068C0B2 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C46295228A30068C0B2 /* WelcomeView.swift */; };
@@ -26,7 +36,6 @@
 		D2744C6D2954F17E0068C0B2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2744C6C2954F17E0068C0B2 /* ChatViewController.swift */; };
 		D2B24BA129515E66005B0518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA029515E66005B0518 /* AppDelegate.swift */; };
 		D2B24BA329515E66005B0518 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA229515E66005B0518 /* SceneDelegate.swift */; };
-		D2B24BA529515E66005B0518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B24BA429515E66005B0518 /* ViewController.swift */; };
 		D2B24BA829515E66005B0518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B24BA629515E66005B0518 /* Main.storyboard */; };
 		D2B24BAA29515E67005B0518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B24BA929515E67005B0518 /* Assets.xcassets */; };
 		D2B24BAD29515E67005B0518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B24BAB29515E67005B0518 /* LaunchScreen.storyboard */; };
@@ -62,6 +71,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D25BB80329574D9F003FB31B /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		D25BB80529574DAA003FB31B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		D25BB80929574E52003FB31B /* UserRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestDto.swift; sourceTree = "<group>"; };
+		D25BB80B29574E5F003FB31B /* UserResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDto.swift; sourceTree = "<group>"; };
+		D25BB81029575BFE003FB31B /* APIEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnviroment.swift; sourceTree = "<group>"; };
+		D25BB81229575C2F003FB31B /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		D25BB81429575C4A003FB31B /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		D25BB81629575C6D003FB31B /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		D25BB81829575C8F003FB31B /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
+		D25BB81A29575CB0003FB31B /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		D2744C41295217C40068C0B2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		D2744C43295217D10068C0B2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D2744C46295228A30068C0B2 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -82,7 +101,6 @@
 		D2B24B9D29515E66005B0518 /* AppJam_Laboratory2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppJam_Laboratory2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B24BA029515E66005B0518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B24BA229515E66005B0518 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D2B24BA429515E66005B0518 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2B24BA729515E66005B0518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2B24BA929515E67005B0518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2B24BAC29515E67005B0518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,6 +146,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D25BB80229574D87003FB31B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D25BB80329574D9F003FB31B /* UserAPI.swift */,
+				D25BB80529574DAA003FB31B /* UserService.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		D25BB80729574E23003FB31B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D25BB80929574E52003FB31B /* UserRequestDto.swift */,
+				D25BB80B29574E5F003FB31B /* UserResponseDto.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		D25BB80829574E2B003FB31B /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				D2744C5629541BE70068C0B2 /* FriendModel.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		D25BB80F29575BD5003FB31B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D25BB81029575BFE003FB31B /* APIEnviroment.swift */,
+				D25BB81229575C2F003FB31B /* BaseAPI.swift */,
+				D25BB81429575C4A003FB31B /* BaseTargetType.swift */,
+				D25BB81629575C6D003FB31B /* GenericResponse.swift */,
+				D25BB81829575C8F003FB31B /* MoyaLoggingPlugin.swift */,
+				D25BB81A29575CB0003FB31B /* NetworkResult.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		D2744C40295217A80068C0B2 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +234,8 @@
 		D2744C4D29532B2D0068C0B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D2744C5629541BE70068C0B2 /* FriendModel.swift */,
+				D25BB80829574E2B003FB31B /* Friend */,
+				D25BB80729574E23003FB31B /* User */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -262,7 +320,6 @@
 				D2B24BD229515F5F005B0518 /* Network */,
 				D2B24BD129515F53005B0518 /* Resource */,
 				D2B24BD029515F44005B0518 /* Global */,
-				D2B24BA429515E66005B0518 /* ViewController.swift */,
 			);
 			path = AppJam_Laboratory2;
 			sourceTree = "<group>";
@@ -310,6 +367,8 @@
 		D2B24BD229515F5F005B0518 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D25BB80F29575BD5003FB31B /* Base */,
+				D25BB80229574D87003FB31B /* User */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -505,30 +564,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2B24BA529515E66005B0518 /* ViewController.swift in Sources */,
 				D2B24BA129515E66005B0518 /* AppDelegate.swift in Sources */,
 				D2744C6B2954EB3B0068C0B2 /* ChatView.swift in Sources */,
 				D2744C5129532B7A0068C0B2 /* FriendViewController.swift in Sources */,
 				D2744C49295228B20068C0B2 /* WelcomeViewController.swift in Sources */,
+				D25BB81729575C6D003FB31B /* GenericResponse.swift in Sources */,
 				D2744C55295332570068C0B2 /* Image.swift in Sources */,
+				D25BB81529575C4A003FB31B /* BaseTargetType.swift in Sources */,
+				D25BB80629574DAA003FB31B /* UserService.swift in Sources */,
 				D2744C5729541BE70068C0B2 /* FriendModel.swift in Sources */,
 				D2744C5329532FBB0068C0B2 /* FriendTopView.swift in Sources */,
 				D2B24BE829517592005B0518 /* LoginView.swift in Sources */,
 				D2B24BED29518AB6005B0518 /* BaseView.swift in Sources */,
 				D2744C6D2954F17E0068C0B2 /* ChatViewController.swift in Sources */,
+				D25BB81329575C2F003FB31B /* BaseAPI.swift in Sources */,
+				D25BB80A29574E52003FB31B /* UserRequestDto.swift in Sources */,
 				D2744C42295217C40068C0B2 /* SignUpView.swift in Sources */,
 				D2744C652954E7580068C0B2 /* ChatTopView.swift in Sources */,
 				D2744C47295228A30068C0B2 /* WelcomeView.swift in Sources */,
 				D2B24BEA2951759C005B0518 /* LoginViewController.swift in Sources */,
+				D25BB80C29574E5F003FB31B /* UserResponseDto.swift in Sources */,
 				D2744C5A29541DD40068C0B2 /* FriendTableViewCell.swift in Sources */,
 				D2744C44295217D10068C0B2 /* SignUpViewController.swift in Sources */,
 				D2B24BEF29518B0A005B0518 /* BaseViewController.swift in Sources */,
 				D2744C5F295437B70068C0B2 /* UIView +Extension.swift in Sources */,
+				D25BB81B29575CB0003FB31B /* NetworkResult.swift in Sources */,
 				D2744C4F29532B6A0068C0B2 /* FriendView.swift in Sources */,
 				D2744C672954E7640068C0B2 /* ChatAdView.swift in Sources */,
 				D2B24BA329515E66005B0518 /* SceneDelegate.swift in Sources */,
 				D2744C692954E7750068C0B2 /* ChatCollectionViewCell.swift in Sources */,
+				D25BB80429574D9F003FB31B /* UserAPI.swift in Sources */,
 				D2744C5C29542B7B0068C0B2 /* FriendHeaderView.swift in Sources */,
+				D25BB81929575C8F003FB31B /* MoyaLoggingPlugin.swift in Sources */,
+				D25BB81129575BFE003FB31B /* APIEnviroment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +771,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://3.34.53.11:8080";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27VUFHH5W2;
@@ -731,6 +800,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://3.34.53.11:8080";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27VUFHH5W2;

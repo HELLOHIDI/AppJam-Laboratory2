@@ -27,11 +27,9 @@ class SignUpViewController: BaseViewController {
     
     //MARK: - Custom Method
     
-    private func presentToWelcomeView() {
+    private func presentToWelcomeView(email: String) {
         let welcomeViewController = WelcomeViewController()
         welcomeViewController.modalPresentationStyle = .formSheet
-        
-        guard let email = signUpView.emailTextField.text else { return }
         welcomeViewController.dataSend(email: email)
         
         self.present(welcomeViewController, animated: true)
@@ -41,6 +39,32 @@ class SignUpViewController: BaseViewController {
     
     @objc
     private func gotoWelcomeView() {
-        presentToWelcomeView()
+        signUp()
+    }
+}
+
+extension SignUpViewController {
+    func signUp() {
+        guard let email = signUpView.emailTextField.text else { return }
+        guard let password = signUpView.passwordTextField.text else { return }
+        guard let checkPassword = signUpView.checkPassWordTextField.text else { return }
+        let param = SignupRequestDto(emailOrContact: email, password: password, passwordCheck: checkPassword)
+        
+        UserAPI.shared.signUp(param: param, completion: {(result) in
+            switch result {
+            case .success:
+                self.presentToWelcomeView(email: email)
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            case .requestErr(_):
+                print("requestErr")
+            case .decodedErr:
+                print("decodedErr")
+            }
+        })
     }
 }

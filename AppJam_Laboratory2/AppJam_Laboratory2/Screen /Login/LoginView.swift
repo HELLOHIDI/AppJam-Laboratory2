@@ -46,7 +46,7 @@ final class LoginView: BaseView {
         $0.backgroundColor = 0xA09FA0.color
     }
     
-    private var passwordTextField = UITextField().then {
+    public var passwordTextField = UITextField().then {
         $0.font = UIFont(name: "AppleSDGothicNeo-Normal", size: 17)
         $0.textColor = 0x000000.color
         $0.borderStyle = .none
