@@ -10,9 +10,11 @@ import UIKit
 import SnapKit
 import Then
 
-final class GalleryViewController : UIViewController{
+final class GalleryViewController : BaseViewController{
     
     //MARK: - Properties
+    
+    private let galleryView = GalleryView()
     
     //MARK: - UI Components
     
@@ -20,22 +22,9 @@ final class GalleryViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setUI()
-        setLayout()
     }
     
-    //MARK: - Custom Method
-    
-    
-    private func setUI(){
-        
+    override func loadView() {
+        self.view = galleryView
     }
-    
-    private func setLayout(){
-        
-    }
-    
-    //MARK: - Action Method
-    
 }
