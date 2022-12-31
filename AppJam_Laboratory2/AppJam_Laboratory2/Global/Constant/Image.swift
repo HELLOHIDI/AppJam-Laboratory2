@@ -28,4 +28,17 @@ public enum Image {
     static let adImage = UIImage(named: "chat_AdImage")!
     // Chat
 
+    
+    static let iconTabPersonUnfilled = UIImage(named: "tab_ic_TabPersonUnfilled")
+    static let iconTabChatUnfilled = UIImage(named: "tab_ic_TabChatUnfilled")
+    static let iconTabSharpUnfilled = UIImage(named: "tab_ic_TabSharpUnfilled")
+    static let iconTabShopUnfilled = UIImage(named: "tab_ic_TabShopUnfilled")
+    static let iconTabMoreUnfilled = UIImage(named: "tab_ic_TabMoreUnfilled")
+    static let iconTabPersonFilled = UIImage(named: "tab_ic_TabPersonFilled")
+    static let iconTabChatFilled = UIImage(named: "tab_ic_TabChatFilled")
+    static let iconTabSharpFilled = UIImage(named: "tab_ic_TabSharpFilled")
+    static let iconTabShopFilled = UIImage(named: "tab_ic_TabShopFilled")
+    static let iconTabMoreFilled = UIImage(named: "tab_ic_TabMoreFilled")
+    // Tabbar
+
 }
