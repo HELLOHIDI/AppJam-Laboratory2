@@ -13,7 +13,7 @@ import Then
 
 final class GalleryView: BaseView {
     
-    private let galleryTopView = GalleryTopView()
+    public let galleryTopView = GalleryTopView()
     
     public lazy var galleryCollectionView = UICollectionView(
         frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
@@ -22,8 +22,6 @@ final class GalleryView: BaseView {
             $0.isScrollEnabled = true
             $0.showsVerticalScrollIndicator = false
             $0.alwaysBounceVertical = true
-            $0.delegate = self
-            $0.dataSource = self
         }
     
     override func setupView() {

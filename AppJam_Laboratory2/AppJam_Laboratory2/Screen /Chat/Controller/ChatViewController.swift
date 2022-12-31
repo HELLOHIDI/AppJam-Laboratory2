@@ -32,6 +32,9 @@ final class ChatViewController: BaseViewController {
     //MARK: - Custom Method
     
     private func register() {
+        chatView.chatCollectionView.delegate = self
+        chatView.chatCollectionView.dataSource = self
+        
         chatView.chatCollectionView.register(
             ChatCollectionViewCell.self,
             forCellWithReuseIdentifier: ChatCollectionViewCell.identifier)
@@ -42,7 +45,7 @@ final class ChatViewController: BaseViewController {
 
 //MARK: - UICollectionViewDelegateFlowLayout
 
-extension ChatView: UICollectionViewDelegateFlowLayout {
+extension ChatViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -68,7 +71,7 @@ extension ChatView: UICollectionViewDelegateFlowLayout {
 
 //MARK: - UICollectionViewDataSource
 
-extension ChatView: UICollectionViewDataSource {
+extension ChatViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) ->
     Int {
         return chatDummyModel.count

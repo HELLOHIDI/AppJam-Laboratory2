@@ -14,6 +14,7 @@ import Then
 final class GalleryViewController : BaseViewController{
     
     //MARK: - Properties
+    public var photoIndexArray: [Int] = []
     
     private let galleryView = GalleryView()
     
@@ -31,17 +32,17 @@ final class GalleryViewController : BaseViewController{
     }
     
     private func register() {
+        galleryView.galleryCollectionView.delegate = self
+        galleryView.galleryCollectionView.dataSource = self
+        
         galleryView.galleryCollectionView.register(
             GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.identifier)
     }
 }
 
-extension GalleryView: UICollectionViewDelegateFlowLayout {
+extension GalleryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemSpacing = 9
-        let width = (Int(UIScreen.main.bounds.width) - (itemSpacing * 2)) / 3
-        let height = width
-        return CGSize(width: width, height: height)
+        return CGSize(width: 123, height: 123)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -54,11 +55,28 @@ extension GalleryView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell  = collectionView.cellForItem(at: indexPath) as! GalleryCollectionViewCell
-        cell.selectedPhoto()
+        
+        if photoIndexArray.contains(indexPath.item) {
+            photoIndexArray.remove(at: Int(cell.indexLabel.text!)!-1)
+            cell.deSelectedPhotoLayout()
+        } else {
+            photoIndexArray.append(indexPath.item)
+            cell.selectedPhotoLayout()
+        }
+        
+        if !photoIndexArray.isEmpty {
+            for i in 0...photoIndexArray.count-1 {
+                let index = IndexPath(item: photoIndexArray[i], section: 0)
+                let cell = collectionView.cellForItem(at: index) as! GalleryCollectionViewCell
+                cell.indexLabel.text = "\(i+1)"
+            }
+        }
+        updateSendLabel()
     }
 }
 
-extension GalleryView: UICollectionViewDataSource {
+
+extension GalleryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         galleryDummyModel.count
     }
@@ -69,5 +87,19 @@ extension GalleryView: UICollectionViewDataSource {
                 as? GalleryCollectionViewCell else { return UICollectionViewCell() }
         galleryCell.dataBind(model: galleryDummyModel[indexPath.item])
         return galleryCell
+    }
+}
+
+extension GalleryViewController {
+    public func updateSendLabel() {
+        var sendText = galleryView.galleryTopView.sendLabel.text!
+        if !photoIndexArray.isEmpty {
+            sendText = String(photoIndexArray.count) + "전송"
+            let attributeString = NSMutableAttributedString(string: sendText)
+            attributeString.addAttribute(.foregroundColor, value: 0xF6DD2A.color, range: (sendText as NSString).range(of: String(photoIndexArray.count)))
+            galleryView.galleryTopView.sendLabel.attributedText = attributeString
+        } else {
+            galleryView.galleryTopView.sendLabel.text = "전송"
+        }
     }
 }

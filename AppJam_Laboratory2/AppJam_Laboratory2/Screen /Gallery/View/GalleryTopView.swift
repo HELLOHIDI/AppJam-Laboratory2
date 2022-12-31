@@ -25,7 +25,7 @@ final class GalleryTopView: BaseView {
         $0.textColor = 0x000000.color
     }
     
-    private var sendLabel = UILabel().then {
+    public var sendLabel = UILabel().then {
         $0.text = "전송"
         $0.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 16)
         $0.textColor = 0x000000.color
@@ -51,7 +51,7 @@ final class GalleryTopView: BaseView {
         
         sendLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(11)
-            $0.leading.equalTo(self.titleLabel.snp.trailing).offset(116)
+            $0.trailing.equalToSuperview().inset(10)
         }
     }
 }

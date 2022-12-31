@@ -24,8 +24,6 @@ final class ChatView: BaseView {
             $0.isScrollEnabled = true
             $0.showsVerticalScrollIndicator = false
             $0.alwaysBounceVertical = true
-            $0.delegate = self
-            $0.dataSource = self
         }
     
     override func setupView() {
