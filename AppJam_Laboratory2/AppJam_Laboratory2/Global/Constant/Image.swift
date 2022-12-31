@@ -10,6 +10,10 @@ import UIKit
 public enum Image {
     
     static let setting = UIImage(named: "ic_setting")!
+    static let plus = UIImage(named: "ic_plus")!
+    static let close = UIImage(named: "ic_close")
+    // Icon
+    
     static let friendProfileImage = UIImage(named: "friend_profile")!
     static let friendProfileImage1 = UIImage(named: "friend_profile1")!
     static let friendProfileImage2 = UIImage(named: "friend_profile2")!
@@ -20,13 +24,13 @@ public enum Image {
     static let friendProfileImage7 = UIImage(named: "friend_profile7")!
     static let friendProfileImage8 = UIImage(named: "friend_profile8")!
     static let friendProfileImage9 = UIImage(named: "friend_profile9")!
-    
-    
     // Friend
     
-    static let plus = UIImage(named: "ic_plus")!
+    
     static let adImage = UIImage(named: "chat_AdImage")!
     // Chat
+    
+    
 
     
     static let iconTabPersonUnfilled = UIImage(named: "tab_ic_TabPersonUnfilled")
