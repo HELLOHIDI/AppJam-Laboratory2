@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2415C872960206D00AFDE2E /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2415C862960206D00AFDE2E /* TabbarController.swift */; };
+		D2415C8C296020CC00AFDE2E /* SharpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2415C8B296020CC00AFDE2E /* SharpViewController.swift */; };
+		D2415C8E296020DB00AFDE2E /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2415C8D296020DB00AFDE2E /* ShopViewController.swift */; };
+		D2415C90296020E700AFDE2E /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2415C8F296020E700AFDE2E /* MoreViewController.swift */; };
 		D25BB80429574D9F003FB31B /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80329574D9F003FB31B /* UserAPI.swift */; };
 		D25BB80629574DAA003FB31B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80529574DAA003FB31B /* UserService.swift */; };
 		D25BB80A29574E52003FB31B /* UserRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25BB80929574E52003FB31B /* UserRequestDto.swift */; };
@@ -71,6 +75,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D2415C862960206D00AFDE2E /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		D2415C8B296020CC00AFDE2E /* SharpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharpViewController.swift; sourceTree = "<group>"; };
+		D2415C8D296020DB00AFDE2E /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		D2415C8F296020E700AFDE2E /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		D25BB80329574D9F003FB31B /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		D25BB80529574DAA003FB31B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D25BB80929574E52003FB31B /* UserRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestDto.swift; sourceTree = "<group>"; };
@@ -146,6 +154,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2415C852960204E00AFDE2E /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				D2415C862960206D00AFDE2E /* TabbarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		D2415C882960209F00AFDE2E /* Sharp */ = {
+			isa = PBXGroup;
+			children = (
+				D2415C8B296020CC00AFDE2E /* SharpViewController.swift */,
+			);
+			path = Sharp;
+			sourceTree = "<group>";
+		};
+		D2415C89296020B700AFDE2E /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				D2415C8D296020DB00AFDE2E /* ShopViewController.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		D2415C8A296020BE00AFDE2E /* More */ = {
+			isa = PBXGroup;
+			children = (
+				D2415C8F296020E700AFDE2E /* MoreViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
 		D25BB80229574D87003FB31B /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +416,10 @@
 		D2B24BD329515F68005B0518 /* Screen  */ = {
 			isa = PBXGroup;
 			children = (
+				D2415C8A296020BE00AFDE2E /* More */,
+				D2415C89296020B700AFDE2E /* Shop */,
+				D2415C882960209F00AFDE2E /* Sharp */,
+				D2415C852960204E00AFDE2E /* Tabbar */,
 				D2744C602954E6CD0068C0B2 /* Chat */,
 				D2744C4A29532B130068C0B2 /* Friend */,
 				D2744C45295228920068C0B2 /* Welcome */,
@@ -577,6 +621,7 @@
 				D2B24BE829517592005B0518 /* LoginView.swift in Sources */,
 				D2B24BED29518AB6005B0518 /* BaseView.swift in Sources */,
 				D2744C6D2954F17E0068C0B2 /* ChatViewController.swift in Sources */,
+				D2415C90296020E700AFDE2E /* MoreViewController.swift in Sources */,
 				D25BB81329575C2F003FB31B /* BaseAPI.swift in Sources */,
 				D25BB80A29574E52003FB31B /* UserRequestDto.swift in Sources */,
 				D2744C42295217C40068C0B2 /* SignUpView.swift in Sources */,
@@ -584,12 +629,14 @@
 				D2744C47295228A30068C0B2 /* WelcomeView.swift in Sources */,
 				D2B24BEA2951759C005B0518 /* LoginViewController.swift in Sources */,
 				D25BB80C29574E5F003FB31B /* UserResponseDto.swift in Sources */,
+				D2415C8E296020DB00AFDE2E /* ShopViewController.swift in Sources */,
 				D2744C5A29541DD40068C0B2 /* FriendTableViewCell.swift in Sources */,
 				D2744C44295217D10068C0B2 /* SignUpViewController.swift in Sources */,
 				D2B24BEF29518B0A005B0518 /* BaseViewController.swift in Sources */,
 				D2744C5F295437B70068C0B2 /* UIView +Extension.swift in Sources */,
 				D25BB81B29575CB0003FB31B /* NetworkResult.swift in Sources */,
 				D2744C4F29532B6A0068C0B2 /* FriendView.swift in Sources */,
+				D2415C8C296020CC00AFDE2E /* SharpViewController.swift in Sources */,
 				D2744C672954E7640068C0B2 /* ChatAdView.swift in Sources */,
 				D2B24BA329515E66005B0518 /* SceneDelegate.swift in Sources */,
 				D2744C692954E7750068C0B2 /* ChatCollectionViewCell.swift in Sources */,
@@ -597,6 +644,7 @@
 				D2744C5C29542B7B0068C0B2 /* FriendHeaderView.swift in Sources */,
 				D25BB81929575C8F003FB31B /* MoyaLoggingPlugin.swift in Sources */,
 				D25BB81129575BFE003FB31B /* APIEnviroment.swift in Sources */,
+				D2415C872960206D00AFDE2E /* TabbarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
