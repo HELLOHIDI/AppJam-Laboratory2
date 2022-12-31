@@ -27,4 +27,9 @@ final class GalleryViewController : BaseViewController{
     override func loadView() {
         self.view = galleryView
     }
+    
+    private func register() {
+        galleryView.galleryCollectionView.register(
+            GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.identifier)
+    }
 }

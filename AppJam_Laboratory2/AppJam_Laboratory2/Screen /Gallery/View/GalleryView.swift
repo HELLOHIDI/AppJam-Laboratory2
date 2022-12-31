@@ -15,7 +15,7 @@ final class GalleryView: BaseView {
     
     private let galleryTopView = GalleryTopView()
     
-    private let galleryCollectionView = UICollectionView(
+    public let galleryCollectionView = UICollectionView(
         frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.isScrollEnabled = true

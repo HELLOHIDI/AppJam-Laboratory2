@@ -10,7 +10,15 @@ import UIKit
 
 class GalleryCollectionViewCell: UICollectionViewCell {
     
+    //MARK: - Properties
+    
+    static let identifier = "GalleryCollectionViewCell"
+    
+    //MARK: - UI Components
+    
     private var galleryImageView = UIImageView()
+    
+    //MARK: - Life Cycles
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,6 +27,8 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Custom Method
     
     private func setupView() {
         contentView.backgroundColor = .white
