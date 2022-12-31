@@ -81,19 +81,19 @@ extension KakaoTabbarController : UITabBarControllerDelegate {
         
         
         let imageNames = [
-            "iconTabPersonUnfilled",
-            "iconTabChatUnfilled",
-            "iconTabSharpUnfilled",
-            "iconTabShopUnfilled",
-            "iconTabMoreUnfilled"
+            "tab_ic_TabPersonUnfilled",
+            "tab_ic_TabChatUnfilled",
+            "tab_ic_TabSharpUnfilled",
+            "tab_ic_TabShopUnfilled",
+            "tab_ic_TabMoreUnfilled"
         ]
         
         let imageSelectedNames = [
-            "iconTabPersonFilled",
-            "iconTabChatFilled",
-            "iconTabSharpFilled",
-            "iconTabShopFilled",
-            "iconTabMoreFilled"
+            "tab_ic_TabPersonFilled",
+            "tab_ic_TabChatFilled",
+            "tab_ic_TabSharpFilled",
+            "tab_ic_TabShopFilled",
+            "tab_ic_TabMoreFilled"
         ]
         
         
