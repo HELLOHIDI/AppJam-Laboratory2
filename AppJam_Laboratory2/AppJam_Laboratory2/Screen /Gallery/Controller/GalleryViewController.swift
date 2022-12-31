@@ -33,3 +33,18 @@ final class GalleryViewController : BaseViewController{
             GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.identifier)
     }
 }
+
+extension GalleryView: UICollectionViewDelegate {}
+
+extension GalleryView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        galleryDummyModel.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let galleryCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: GalleryCollectionViewCell.identifier, for: indexPath) as?
+                GalleryCollectionViewCell else { return UICollectionViewCell() }
+        return galleryCell
+    }
+}

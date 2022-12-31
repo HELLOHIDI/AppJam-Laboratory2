@@ -15,14 +15,14 @@ final class GalleryView: BaseView {
     
     private let galleryTopView = GalleryTopView()
     
-    public let galleryCollectionView = UICollectionView(
+    public lazy var galleryCollectionView = UICollectionView(
         frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.isScrollEnabled = true
             $0.showsVerticalScrollIndicator = false
             $0.alwaysBounceVertical = true
-            // $0.delegate = self
-            // $0.dataSource = self
+            $0.delegate = self
+            $0.dataSource = self
         }
     
     override func setupView() {
